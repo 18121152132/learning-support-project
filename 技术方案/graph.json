@@ -1,0 +1,1215 @@
+{
+  "version": "kg-v1",
+  "generated_at": "2026-11-12T11:46:06+00:00",
+  "nodes": [
+    {
+      "id": "ROLE:顾明岚",
+      "type": "role",
+      "label": "顾明岚",
+      "source_ref": "config.yaml#roles",
+      "allow": [
+        "approve_pilot_scope",
+        "assign_improvement_owner",
+        "review_retrospective",
+        "accept_escalation",
+        "resume_pilot"
+      ],
+      "deny": [
+        "decide_system_change",
+        "decide_data_interface",
+        "decide_audit_rule",
+        "extra_budget",
+        "professional_signoff"
+      ]
+    },
+    {
+      "id": "ROLE:林亦舟",
+      "type": "role",
+      "label": "林亦舟",
+      "source_ref": "config.yaml#roles",
+      "allow": [
+        "classify_transfer",
+        "pause_bad_suggestion",
+        "confirm_contact",
+        "contact_student",
+        "confirm_handoff"
+      ],
+      "deny": [
+        "change_rule",
+        "auto_score",
+        "professional_signoff"
+      ]
+    },
+    {
+      "id": "ROLE:唐映秋",
+      "type": "role",
+      "label": "唐映秋",
+      "source_ref": "config.yaml#roles",
+      "allow": [
+        "organize_handoff",
+        "start_review",
+        "assign_handler",
+        "confirm_handoff",
+        "confirm_contact",
+        "contact_student"
+      ],
+      "deny": [
+        "professional_signoff",
+        "approve_beyond_scope",
+        "merge_rule_versions"
+      ]
+    },
+    {
+      "id": "ROLE:秦芮",
+      "type": "role",
+      "label": "秦芮",
+      "source_ref": "config.yaml#roles",
+      "allow": [
+        "read_learning_events",
+        "validate_data_quality",
+        "handle_repair_queue",
+        "handle_outage"
+      ],
+      "deny": [
+        "auto_grade",
+        "auto_discipline",
+        "write_unapproved_action"
+      ]
+    },
+    {
+      "id": "ROLE:傅景",
+      "type": "role",
+      "label": "傅景",
+      "source_ref": "config.yaml#roles",
+      "allow": [
+        "professional_signoff",
+        "judge_stop_condition",
+        "review_audit",
+        "pause_pilot",
+        "resume_pilot",
+        "approve_rule_version"
+      ],
+      "deny": [
+        "store_password",
+        "store_unnecessary_pii"
+      ]
+    },
+    {
+      "id": "ROLE:叶书",
+      "type": "role",
+      "label": "叶书",
+      "source_ref": "config.yaml#roles",
+      "allow": [
+        "accept_dispute",
+        "collect_misjudgement",
+        "join_acceptance"
+      ],
+      "deny": [
+        "promise_compensation",
+        "auto_score"
+      ]
+    },
+    {
+      "id": "FLOW:1",
+      "type": "flow_step",
+      "label": "学习记录采集",
+      "source_ref": "config.yaml#knowledge.flow_steps",
+      "seq": 1,
+      "owner": "秦芮"
+    },
+    {
+      "id": "FLOW:2",
+      "type": "flow_step",
+      "label": "支持需求识别",
+      "source_ref": "config.yaml#knowledge.flow_steps",
+      "seq": 2,
+      "owner": "林亦舟"
+    },
+    {
+      "id": "FLOW:3",
+      "type": "flow_step",
+      "label": "助教联系",
+      "source_ref": "config.yaml#knowledge.flow_steps",
+      "seq": 3,
+      "owner": "林亦舟"
+    },
+    {
+      "id": "FLOW:4",
+      "type": "flow_step",
+      "label": "辅导安排",
+      "source_ref": "config.yaml#knowledge.flow_steps",
+      "seq": 4,
+      "owner": "唐映秋"
+    },
+    {
+      "id": "FLOW:5",
+      "type": "flow_step",
+      "label": "反馈",
+      "source_ref": "config.yaml#knowledge.flow_steps",
+      "seq": 5,
+      "owner": "叶书"
+    },
+    {
+      "id": "FLOW:6",
+      "type": "flow_step",
+      "label": "复盘",
+      "source_ref": "config.yaml#knowledge.flow_steps",
+      "seq": 6,
+      "owner": "顾明岚"
+    },
+    {
+      "id": "POLICY:合规约束",
+      "type": "policy",
+      "label": "合规约束与停止条件",
+      "source_ref": "config.yaml#security"
+    },
+    {
+      "id": "RED:sensitive:gender",
+      "type": "redline",
+      "label": "sensitive:gender",
+      "source_ref": "config.yaml#security.sensitive",
+      "group": "sensitive"
+    },
+    {
+      "id": "RED:sensitive:age",
+      "type": "redline",
+      "label": "sensitive:age",
+      "source_ref": "config.yaml#security.sensitive",
+      "group": "sensitive"
+    },
+    {
+      "id": "RED:sensitive:ethnicity",
+      "type": "redline",
+      "label": "sensitive:ethnicity",
+      "source_ref": "config.yaml#security.sensitive",
+      "group": "sensitive"
+    },
+    {
+      "id": "RED:sensitive:religion",
+      "type": "redline",
+      "label": "sensitive:religion",
+      "source_ref": "config.yaml#security.sensitive",
+      "group": "sensitive"
+    },
+    {
+      "id": "RED:sensitive:health",
+      "type": "redline",
+      "label": "sensitive:health",
+      "source_ref": "config.yaml#security.sensitive",
+      "group": "sensitive"
+    },
+    {
+      "id": "RED:sensitive:disability",
+      "type": "redline",
+      "label": "sensitive:disability",
+      "source_ref": "config.yaml#security.sensitive",
+      "group": "sensitive"
+    },
+    {
+      "id": "RED:sensitive:family_income",
+      "type": "redline",
+      "label": "sensitive:family_income",
+      "source_ref": "config.yaml#security.sensitive",
+      "group": "sensitive"
+    },
+    {
+      "id": "RED:sensitive:phone",
+      "type": "redline",
+      "label": "sensitive:phone",
+      "source_ref": "config.yaml#security.sensitive",
+      "group": "sensitive"
+    },
+    {
+      "id": "RED:sensitive:id_card",
+      "type": "redline",
+      "label": "sensitive:id_card",
+      "source_ref": "config.yaml#security.sensitive",
+      "group": "sensitive"
+    },
+    {
+      "id": "RED:sensitive:password",
+      "type": "redline",
+      "label": "sensitive:password",
+      "source_ref": "config.yaml#security.sensitive",
+      "group": "sensitive"
+    },
+    {
+      "id": "RED:output:score",
+      "type": "redline",
+      "label": "output:score",
+      "source_ref": "config.yaml#security.output",
+      "group": "output"
+    },
+    {
+      "id": "RED:output:grade",
+      "type": "redline",
+      "label": "output:grade",
+      "source_ref": "config.yaml#security.output",
+      "group": "output"
+    },
+    {
+      "id": "RED:output:discipline",
+      "type": "redline",
+      "label": "output:discipline",
+      "source_ref": "config.yaml#security.output",
+      "group": "output"
+    },
+    {
+      "id": "RED:output:ability_label",
+      "type": "redline",
+      "label": "output:ability_label",
+      "source_ref": "config.yaml#security.output",
+      "group": "output"
+    },
+    {
+      "id": "RED:output:level_label",
+      "type": "redline",
+      "label": "output:level_label",
+      "source_ref": "config.yaml#security.output",
+      "group": "output"
+    },
+    {
+      "id": "RED:output:understanding_label",
+      "type": "redline",
+      "label": "output:understanding_label",
+      "source_ref": "config.yaml#security.output",
+      "group": "output"
+    },
+    {
+      "id": "RED:output:mastered",
+      "type": "redline",
+      "label": "output:mastered",
+      "source_ref": "config.yaml#security.output",
+      "group": "output"
+    },
+    {
+      "id": "RED:auto:contact_student",
+      "type": "redline",
+      "label": "auto:contact_student",
+      "source_ref": "config.yaml#security.auto",
+      "group": "auto"
+    },
+    {
+      "id": "RED:auto:auto_score",
+      "type": "redline",
+      "label": "auto:auto_score",
+      "source_ref": "config.yaml#security.auto",
+      "group": "auto"
+    },
+    {
+      "id": "RED:auto:auto_grade",
+      "type": "redline",
+      "label": "auto:auto_grade",
+      "source_ref": "config.yaml#security.auto",
+      "group": "auto"
+    },
+    {
+      "id": "RED:auto:auto_discipline",
+      "type": "redline",
+      "label": "auto:auto_discipline",
+      "source_ref": "config.yaml#security.auto",
+      "group": "auto"
+    },
+    {
+      "id": "RED:auto:external_commitment",
+      "type": "redline",
+      "label": "auto:external_commitment",
+      "source_ref": "config.yaml#security.auto",
+      "group": "auto"
+    },
+    {
+      "id": "RED:auto:asset_change",
+      "type": "redline",
+      "label": "auto:asset_change",
+      "source_ref": "config.yaml#security.auto",
+      "group": "auto"
+    },
+    {
+      "id": "RED:auto:professional_signoff",
+      "type": "redline",
+      "label": "auto:professional_signoff",
+      "source_ref": "config.yaml#security.auto",
+      "group": "auto"
+    },
+    {
+      "id": "RED:stop:sensitive_attribute_used",
+      "type": "redline",
+      "label": "stop:sensitive_attribute_used",
+      "source_ref": "config.yaml#security.stop",
+      "group": "stop"
+    },
+    {
+      "id": "RED:stop:no_behavior_evidence",
+      "type": "redline",
+      "label": "stop:no_behavior_evidence",
+      "source_ref": "config.yaml#security.stop",
+      "group": "stop"
+    },
+    {
+      "id": "RED:stop:auto_scoring_attempt",
+      "type": "redline",
+      "label": "stop:auto_scoring_attempt",
+      "source_ref": "config.yaml#security.stop",
+      "group": "stop"
+    },
+    {
+      "id": "RED:stop:version_conflict",
+      "type": "redline",
+      "label": "stop:version_conflict",
+      "source_ref": "config.yaml#security.stop",
+      "group": "stop"
+    },
+    {
+      "id": "RED:stop:source_unavailable",
+      "type": "redline",
+      "label": "stop:source_unavailable",
+      "source_ref": "config.yaml#security.stop",
+      "group": "stop"
+    },
+    {
+      "id": "DOC:业务挖掘报告",
+      "type": "document",
+      "label": "业务挖掘报告",
+      "source_ref": "资料清单"
+    },
+    {
+      "id": "DOC:现场调研报告",
+      "type": "document",
+      "label": "现场调研报告",
+      "source_ref": "资料清单"
+    },
+    {
+      "id": "DOC:discovery-report.json",
+      "type": "document",
+      "label": "discovery-report.json",
+      "source_ref": "资料清单"
+    },
+    {
+      "id": "DOC:discovery-report.md",
+      "type": "document",
+      "label": "discovery-report.md",
+      "source_ref": "资料清单"
+    },
+    {
+      "id": "DOC:discovery-report.csv",
+      "type": "document",
+      "label": "discovery-report.csv",
+      "source_ref": "资料清单"
+    },
+    {
+      "id": "DOC:四份可核对资料",
+      "type": "document",
+      "label": "四份可核对资料",
+      "source_ref": "资料清单"
+    },
+    {
+      "id": "DOC:现状流程图",
+      "type": "document",
+      "label": "现状流程图",
+      "source_ref": "资料清单"
+    },
+    {
+      "id": "H1",
+      "type": "hypothesis",
+      "label": "求助归集与连续求助识别是首要瓶颈，应先验证漏单率而非直接上自动建议",
+      "source_ref": "discovery-report.csv#2",
+      "priority": "P0",
+      "owner": "学习服务主任顾明岚（业务）、助教林亦舟（执行）",
+      "status": "在线模型提出的待验证假设",
+      "acceptance": "在两班试点中按业务编号逐笔记录求助来源、首次识别时间、转交时间与是否漏单，先跑两周基线；以漏单低于2%为验收线，人工确认后再联系学生。由顾明岚确认统计口径，林亦舟提供现场样本。"
+    },
+    {
+      "id": "FACT:education-support-f10",
+      "type": "fact",
+      "label": "学生问题散在群聊和作业评论里，助教常漏掉连续求助",
+      "source_ref": "discovery-report.csv#2",
+      "text": "学生问题散在群聊和作业评论里，助教常漏掉连续求助",
+      "fact_id": "education-support-f10"
+    },
+    {
+      "id": "FACT:education-support-f12",
+      "type": "fact",
+      "label": "每周 900 条求助，助教分类与转交每条约 6 分钟",
+      "source_ref": "discovery-report.csv#2",
+      "text": "每周 900 条求助，助教分类与转交每条约 6 分钟",
+      "fact_id": "education-support-f12"
+    },
+    {
+      "id": "FACT:education-support-f01",
+      "type": "fact",
+      "label": "当前主流程是：学习记录 → 支持需求识别 → 助教联系 → 辅导安排 → 反馈 → 复盘。管理层还没有分别量出每个节点的等待和处理时间。",
+      "source_ref": "discovery-report.csv#2",
+      "text": "当前主流程是：学习记录 → 支持需求识别 → 助教联系 → 辅导安排 → 反馈 → 复盘。管理层还没有分别量出每个节点的等待和处理时间。",
+      "fact_id": "education-support-f01"
+    },
+    {
+      "id": "FACT:education-support-f02",
+      "type": "fact",
+      "label": "两个班级试点，求助漏单低于 2%，人工确认后再联系学生",
+      "source_ref": "discovery-report.csv#2",
+      "text": "两个班级试点，求助漏单低于 2%，人工确认后再联系学生",
+      "fact_id": "education-support-f02"
+    },
+    {
+      "id": "FACT:education-support-f51",
+      "type": "fact",
+      "label": "目前可用工作量基线是：每周 900 条求助，助教分类与转交每条约 6 分钟。服务侧还会逐笔采集交接等待和重新联系次数，不能用发送通知数量代替实际完成量。",
+      "source_ref": "discovery-report.csv#2",
+      "text": "目前可用工作量基线是：每周 900 条求助，助教分类与转交每条约 6 分钟。服务侧还会逐笔采集交接等待和重新联系次数，不能用发送通知数量代替实际完成量。",
+      "fact_id": "education-support-f51"
+    },
+    {
+      "id": "H2",
+      "type": "hypothesis",
+      "label": "交接“确认接手才算完成”的规则需系统化，否则跨岗责任仍会断",
+      "source_ref": "discovery-report.csv#3",
+      "priority": "P0",
+      "owner": "课程运营员唐映秋",
+      "status": "在线模型提出的待验证假设",
+      "acceptance": "用历史资料回放抽取若干交接单，检查五要素完整率与接手确认率；再在小范围并行试点中比对系统字段与交接单字段差异。唐映秋整理样本，顾明岚确认试点口径。"
+    },
+    {
+      "id": "FACT:education-support-f23",
+      "type": "fact",
+      "label": "交接至少包含业务编号、当前版本、处理状态、未解决事项和接手人。对方确认接手才结束本岗待办，仅发送消息不算完成。",
+      "source_ref": "discovery-report.csv#3",
+      "text": "交接至少包含业务编号、当前版本、处理状态、未解决事项和接手人。对方确认接手才结束本岗待办，仅发送消息不算完成。",
+      "fact_id": "education-support-f23"
+    },
+    {
+      "id": "FACT:education-support-f25",
+      "type": "fact",
+      "label": "异常先由课程运营员分派给实际处理人；超过约定时限再升级到学习服务主任。跨岗问题不能只写“已转交”，需要明确下一责任人。",
+      "source_ref": "discovery-report.csv#3",
+      "text": "异常先由课程运营员分派给实际处理人；超过约定时限再升级到学习服务主任。跨岗问题不能只写“已转交”，需要明确下一责任人。",
+      "fact_id": "education-support-f25"
+    },
+    {
+      "id": "FACT:education-support-f14",
+      "type": "fact",
+      "label": "因为“学生问题散在群聊和作业评论里，助教常漏掉连续求助”，同事经常把关键说明留在个人便签或群里，再补进正式记录；这些说明目前没有随单据交接。",
+      "source_ref": "discovery-report.csv#3",
+      "text": "因为“学生问题散在群聊和作业评论里，助教常漏掉连续求助”，同事经常把关键说明留在个人便签或群里，再补进正式记录；这些说明目前没有随单据交接。",
+      "fact_id": "education-support-f14"
+    },
+    {
+      "id": "FACT:education-support-f20",
+      "type": "fact",
+      "label": "学习记录 → 支持需求识别 → 助教联系 → 辅导安排 → 反馈 → 复盘。我负责把每一步的输入、输出和待办责任人写清楚；退回原步骤必须保留原因。",
+      "source_ref": "discovery-report.csv#3",
+      "text": "学习记录 → 支持需求识别 → 助教联系 → 辅导安排 → 反馈 → 复盘。我负责把每一步的输入、输出和待办责任人写清楚；退回原步骤必须保留原因。",
+      "fact_id": "education-support-f20"
+    },
+    {
+      "id": "H3",
+      "type": "hypothesis",
+      "label": "自动建议必须附实际行为证据并保留原记录，敏感属性判断为停止条件",
+      "source_ref": "discovery-report.csv#4",
+      "priority": "P0",
+      "owner": "教育数据专员傅景",
+      "status": "在线模型提出的待验证假设",
+      "acceptance": "先列出“禁止自动动作清单”与“必须人工签核清单”，逐条对应证据字段；用历史回放检验每条建议能否追溯到原记录。傅景判定停止条件触发，顾明岚确认复盘责任。"
+    },
+    {
+      "id": "FACT:education-support-f40",
+      "type": "fact",
+      "label": "不依据个人敏感属性判断能力，建议必须附实际行为证据",
+      "source_ref": "discovery-report.csv#4",
+      "text": "不依据个人敏感属性判断能力，建议必须附实际行为证据",
+      "fact_id": "education-support-f40"
+    },
+    {
+      "id": "FACT:education-support-f11",
+      "type": "fact",
+      "label": "视频播放时长高但实际挂着播放器，不能认定已经理解",
+      "source_ref": "discovery-report.csv#4",
+      "text": "视频播放时长高但实际挂着播放器，不能认定已经理解",
+      "fact_id": "education-support-f11"
+    },
+    {
+      "id": "FACT:education-support-f31",
+      "type": "fact",
+      "label": "学习活跃度不等于理解，作业补交与撤回事件缺少统一编号",
+      "source_ref": "discovery-report.csv#4",
+      "text": "学习活跃度不等于理解，作业补交与撤回事件缺少统一编号",
+      "fact_id": "education-support-f31"
+    },
+    {
+      "id": "FACT:education-support-f15",
+      "type": "fact",
+      "label": "建议必须显示对应原记录和待确认字段。发生“视频播放时长高但实际挂着播放器，不能认定已经理解”时，我会暂停该建议，由课程运营员核对后继续，错误结果不能覆盖原记录。",
+      "source_ref": "discovery-report.csv#4",
+      "text": "建议必须显示对应原记录和待确认字段。发生“视频播放时长高但实际挂着播放器，不能认定已经理解”时，我会暂停该建议，由课程运营员核对后继续，错误结果不能覆盖原记录。",
+      "fact_id": "education-support-f15"
+    },
+    {
+      "id": "FACT:education-support-f45",
+      "type": "fact",
+      "label": "每次建议保留业务编号、资料版本、事实引用、建议结果、人工改动和签核人。审计时应能重建“学习记录 → 支持需求识别 → 助教联系 → 辅导安排 → 反馈 → 复盘”中的这次处理，不记录账号口令或不必要的个人信息。",
+      "source_ref": "discovery-report.csv#4",
+      "text": "每次建议保留业务编号、资料版本、事实引用、建议结果、人工改动和签核人。审计时应能重建“学习记录 → 支持需求识别 → 助教联系 → 辅导安排 → 反馈 → 复盘”中的这次处理，不记录账号口令或不必要的个人信息。",
+      "fact_id": "education-support-f45"
+    },
+    {
+      "id": "FACT:education-support-f42",
+      "type": "fact",
+      "label": "两个班级试点，求助漏单低于 2%，人工确认后再联系学生；同时检查“不依据个人敏感属性判断能力，建议必须附实际行为证据”。只要触及停止条件，就暂停试点并由负责人复盘。",
+      "source_ref": "discovery-report.csv#4",
+      "text": "两个班级试点，求助漏单低于 2%，人工确认后再联系学生；同时检查“不依据个人敏感属性判断能力，建议必须附实际行为证据”。只要触及停止条件，就暂停试点并由负责人复盘。",
+      "fact_id": "education-support-f42"
+    },
+    {
+      "id": "H4",
+      "type": "hypothesis",
+      "label": "数据口径与接口能力不足，自动推荐样本须先过质量校验",
+      "source_ref": "discovery-report.csv#5",
+      "priority": "P1",
+      "owner": "学习平台工程师秦芮",
+      "status": "在线模型提出的待验证假设",
+      "acceptance": "先列读写清单与责任人，明确“写”指更新待办状态、回写辅导记录还是触发通知；对补交撤回事件做编号补齐试验，统计进入人工修复队列的比例。秦芮评估集成条件，傅景确认数据授权范围。"
+    },
+    {
+      "id": "FACT:education-support-f30",
+      "type": "fact",
+      "label": "我们正在使用LMS、直播平台与辅导工单，各系统账号权限独立维护，业务状态尚没有统一视图。",
+      "source_ref": "discovery-report.csv#5",
+      "text": "我们正在使用LMS、直播平台与辅导工单，各系统账号权限独立维护，业务状态尚没有统一视图。",
+      "fact_id": "education-support-f30"
+    },
+    {
+      "id": "FACT:education-support-f33",
+      "type": "fact",
+      "label": "先校验“学习日志、作业反馈、求助标签和辅导记录”里的主编号、事件时间和版本字段。学习活跃度不等于理解，作业补交与撤回事件缺少统一编号；有歧义的记录进入人工修复队列，不进入自动推荐样本。",
+      "source_ref": "discovery-report.csv#5",
+      "text": "先校验“学习日志、作业反馈、求助标签和辅导记录”里的主编号、事件时间和版本字段。学习活跃度不等于理解，作业补交与撤回事件缺少统一编号；有歧义的记录进入人工修复队列，不进入自动推荐样本。",
+      "fact_id": "education-support-f33"
+    },
+    {
+      "id": "FACT:education-support-f32",
+      "type": "fact",
+      "label": "可读学习事件，不能自动给学生成绩或纪律处分",
+      "source_ref": "discovery-report.csv#5",
+      "text": "可读学习事件，不能自动给学生成绩或纪律处分",
+      "fact_id": "education-support-f32"
+    },
+    {
+      "id": "FACT:education-support-f35",
+      "type": "fact",
+      "label": "接口中断时继续使用带时间戳的上一份只读快照，并显示“暂未更新”。重连后按业务编号去重补齐，不反复触发同一待办；现有人工流程继续运行。",
+      "source_ref": "discovery-report.csv#5",
+      "text": "接口中断时继续使用带时间戳的上一份只读快照，并显示“暂未更新”。重连后按业务编号去重补齐，不反复触发同一待办；现有人工流程继续运行。",
+      "fact_id": "education-support-f35"
+    },
+    {
+      "id": "H5",
+      "type": "hypothesis",
+      "label": "权限与签核边界需在试点前定清，课程运营员不得代签",
+      "source_ref": "discovery-report.csv#6",
+      "priority": "P1",
+      "owner": "教育数据专员傅景（签核）、学习服务主任顾明岚（试点决策）",
+      "status": "在线模型提出的待验证假设",
+      "acceptance": "由傅景与顾明岚共同产出“需签核操作清单+签核人+触发节点”，在历史回放中模拟一次越权请求，检验系统能否拦截并留痕。教育数据专员对关键风险可否决上线（f04）。"
+    },
+    {
+      "id": "FACT:education-support-f41",
+      "type": "fact",
+      "label": "只有授权的业务岗位可以查看“学习日志、作业反馈、求助标签和辅导记录”。涉及最终决定、对外承诺或资产变更，要由对应审批人确认，不能借用其他人的账号。",
+      "source_ref": "discovery-report.csv#6",
+      "text": "只有授权的业务岗位可以查看“学习日志、作业反馈、求助标签和辅导记录”。涉及最终决定、对外承诺或资产变更，要由对应审批人确认，不能借用其他人的账号。",
+      "fact_id": "education-support-f41"
+    },
+    {
+      "id": "FACT:education-support-f22",
+      "type": "fact",
+      "label": "我的岗位是课程运营员，可以整理、校核和发起复核；不能代替教育数据专员完成专业签核，也不能自行批准“求助整理与支持建议，不自动给学生定性或评分”以外操作。",
+      "source_ref": "discovery-report.csv#6",
+      "text": "我的岗位是课程运营员，可以整理、校核和发起复核；不能代替教育数据专员完成专业签核，也不能自行批准“求助整理与支持建议，不自动给学生定性或评分”以外操作。",
+      "fact_id": "education-support-f22"
+    },
+    {
+      "id": "FACT:education-support-f04",
+      "type": "fact",
+      "label": "立项由学习服务主任推动；教育数据专员可以因关键风险否决上线，课程讲师参与服务结果验收。",
+      "source_ref": "discovery-report.csv#6",
+      "text": "立项由学习服务主任推动；教育数据专员可以因关键风险否决上线，课程讲师参与服务结果验收。",
+      "fact_id": "education-support-f04"
+    },
+    {
+      "id": "H6",
+      "type": "hypothesis",
+      "label": "验收指标需分岗分口径，避免用通知量或拆分成功替代实际完成",
+      "source_ref": "discovery-report.csv#7",
+      "priority": "P1",
+      "owner": "课程讲师叶书（服务解释）、学习服务主任顾明岚（验收）",
+      "status": "在线模型提出的待验证假设",
+      "acceptance": "先定统计周期、分母与排除规则，再按业务编号逐笔采集交接等待与重新联系次数；以两班漏单低于2%复测为前置，达标后才更新规则版本。叶书提供讲师侧误判样本，顾明岚确认改进负责人。"
+    },
+    {
+      "id": "FACT:education-support-f53",
+      "type": "fact",
+      "label": "运营统计登录率，讲师统计掌握情况，助教统计求助解决率。需要分别记录各岗完成时间，试点指标固定分母、排除规则和统计周期，不能把同一业务拆成多次“成功”提高比例。",
+      "source_ref": "discovery-report.csv#7",
+      "text": "运营统计登录率，讲师统计掌握情况，助教统计求助解决率。需要分别记录各岗完成时间，试点指标固定分母、排除规则和统计周期，不能把同一业务拆成多次“成功”提高比例。",
+      "fact_id": "education-support-f53"
+    },
+    {
+      "id": "FACT:education-support-f50",
+      "type": "fact",
+      "label": "运营统计登录率，讲师统计掌握情况，助教统计求助解决率",
+      "source_ref": "discovery-report.csv#7",
+      "text": "运营统计登录率，讲师统计掌握情况，助教统计求助解决率",
+      "fact_id": "education-support-f50"
+    },
+    {
+      "id": "FACT:education-support-f55",
+      "type": "fact",
+      "label": "试点每周收集 助教、课程运营员、课程讲师 的误判例子和未解决问题，由学习服务主任确认改进负责人；先复测“两个班级试点，求助漏单低于 2%，人工确认后再联系学生”，再更新规则版本。",
+      "source_ref": "discovery-report.csv#7",
+      "text": "试点每周收集 助教、课程运营员、课程讲师 的误判例子和未解决问题，由学习服务主任确认改进负责人；先复测“两个班级试点，求助漏单低于 2%，人工确认后再联系学生”，再更新规则版本。",
+      "fact_id": "education-support-f55"
+    }
+  ],
+  "edges": [
+    {
+      "source": "FLOW:1",
+      "target": "FLOW:2",
+      "relation": "next",
+      "source_ref": "现场调研报告#主流程"
+    },
+    {
+      "source": "FLOW:1",
+      "target": "ROLE:秦芮",
+      "relation": "owned_by",
+      "source_ref": "现场调研报告#主流程"
+    },
+    {
+      "source": "FLOW:2",
+      "target": "FLOW:3",
+      "relation": "next",
+      "source_ref": "现场调研报告#主流程"
+    },
+    {
+      "source": "FLOW:2",
+      "target": "ROLE:林亦舟",
+      "relation": "owned_by",
+      "source_ref": "现场调研报告#主流程"
+    },
+    {
+      "source": "FLOW:3",
+      "target": "FLOW:4",
+      "relation": "next",
+      "source_ref": "现场调研报告#主流程"
+    },
+    {
+      "source": "FLOW:3",
+      "target": "ROLE:林亦舟",
+      "relation": "owned_by",
+      "source_ref": "现场调研报告#主流程"
+    },
+    {
+      "source": "FLOW:4",
+      "target": "FLOW:5",
+      "relation": "next",
+      "source_ref": "现场调研报告#主流程"
+    },
+    {
+      "source": "FLOW:4",
+      "target": "ROLE:唐映秋",
+      "relation": "owned_by",
+      "source_ref": "现场调研报告#主流程"
+    },
+    {
+      "source": "FLOW:5",
+      "target": "FLOW:6",
+      "relation": "next",
+      "source_ref": "现场调研报告#主流程"
+    },
+    {
+      "source": "FLOW:5",
+      "target": "ROLE:叶书",
+      "relation": "owned_by",
+      "source_ref": "现场调研报告#主流程"
+    },
+    {
+      "source": "FLOW:6",
+      "target": "ROLE:顾明岚",
+      "relation": "owned_by",
+      "source_ref": "现场调研报告#主流程"
+    },
+    {
+      "source": "POLICY:合规约束",
+      "target": "RED:sensitive:gender",
+      "relation": "includes",
+      "source_ref": "config.yaml#security"
+    },
+    {
+      "source": "POLICY:合规约束",
+      "target": "RED:sensitive:age",
+      "relation": "includes",
+      "source_ref": "config.yaml#security"
+    },
+    {
+      "source": "POLICY:合规约束",
+      "target": "RED:sensitive:ethnicity",
+      "relation": "includes",
+      "source_ref": "config.yaml#security"
+    },
+    {
+      "source": "POLICY:合规约束",
+      "target": "RED:sensitive:religion",
+      "relation": "includes",
+      "source_ref": "config.yaml#security"
+    },
+    {
+      "source": "POLICY:合规约束",
+      "target": "RED:sensitive:health",
+      "relation": "includes",
+      "source_ref": "config.yaml#security"
+    },
+    {
+      "source": "POLICY:合规约束",
+      "target": "RED:sensitive:disability",
+      "relation": "includes",
+      "source_ref": "config.yaml#security"
+    },
+    {
+      "source": "POLICY:合规约束",
+      "target": "RED:sensitive:family_income",
+      "relation": "includes",
+      "source_ref": "config.yaml#security"
+    },
+    {
+      "source": "POLICY:合规约束",
+      "target": "RED:sensitive:phone",
+      "relation": "includes",
+      "source_ref": "config.yaml#security"
+    },
+    {
+      "source": "POLICY:合规约束",
+      "target": "RED:sensitive:id_card",
+      "relation": "includes",
+      "source_ref": "config.yaml#security"
+    },
+    {
+      "source": "POLICY:合规约束",
+      "target": "RED:sensitive:password",
+      "relation": "includes",
+      "source_ref": "config.yaml#security"
+    },
+    {
+      "source": "POLICY:合规约束",
+      "target": "RED:output:score",
+      "relation": "includes",
+      "source_ref": "config.yaml#security"
+    },
+    {
+      "source": "POLICY:合规约束",
+      "target": "RED:output:grade",
+      "relation": "includes",
+      "source_ref": "config.yaml#security"
+    },
+    {
+      "source": "POLICY:合规约束",
+      "target": "RED:output:discipline",
+      "relation": "includes",
+      "source_ref": "config.yaml#security"
+    },
+    {
+      "source": "POLICY:合规约束",
+      "target": "RED:output:ability_label",
+      "relation": "includes",
+      "source_ref": "config.yaml#security"
+    },
+    {
+      "source": "POLICY:合规约束",
+      "target": "RED:output:level_label",
+      "relation": "includes",
+      "source_ref": "config.yaml#security"
+    },
+    {
+      "source": "POLICY:合规约束",
+      "target": "RED:output:understanding_label",
+      "relation": "includes",
+      "source_ref": "config.yaml#security"
+    },
+    {
+      "source": "POLICY:合规约束",
+      "target": "RED:output:mastered",
+      "relation": "includes",
+      "source_ref": "config.yaml#security"
+    },
+    {
+      "source": "POLICY:合规约束",
+      "target": "RED:auto:contact_student",
+      "relation": "includes",
+      "source_ref": "config.yaml#security"
+    },
+    {
+      "source": "POLICY:合规约束",
+      "target": "RED:auto:auto_score",
+      "relation": "includes",
+      "source_ref": "config.yaml#security"
+    },
+    {
+      "source": "POLICY:合规约束",
+      "target": "RED:auto:auto_grade",
+      "relation": "includes",
+      "source_ref": "config.yaml#security"
+    },
+    {
+      "source": "POLICY:合规约束",
+      "target": "RED:auto:auto_discipline",
+      "relation": "includes",
+      "source_ref": "config.yaml#security"
+    },
+    {
+      "source": "POLICY:合规约束",
+      "target": "RED:auto:external_commitment",
+      "relation": "includes",
+      "source_ref": "config.yaml#security"
+    },
+    {
+      "source": "POLICY:合规约束",
+      "target": "RED:auto:asset_change",
+      "relation": "includes",
+      "source_ref": "config.yaml#security"
+    },
+    {
+      "source": "POLICY:合规约束",
+      "target": "RED:auto:professional_signoff",
+      "relation": "includes",
+      "source_ref": "config.yaml#security"
+    },
+    {
+      "source": "POLICY:合规约束",
+      "target": "RED:stop:sensitive_attribute_used",
+      "relation": "includes",
+      "source_ref": "config.yaml#security"
+    },
+    {
+      "source": "POLICY:合规约束",
+      "target": "RED:stop:no_behavior_evidence",
+      "relation": "includes",
+      "source_ref": "config.yaml#security"
+    },
+    {
+      "source": "POLICY:合规约束",
+      "target": "RED:stop:auto_scoring_attempt",
+      "relation": "includes",
+      "source_ref": "config.yaml#security"
+    },
+    {
+      "source": "POLICY:合规约束",
+      "target": "RED:stop:version_conflict",
+      "relation": "includes",
+      "source_ref": "config.yaml#security"
+    },
+    {
+      "source": "POLICY:合规约束",
+      "target": "RED:stop:source_unavailable",
+      "relation": "includes",
+      "source_ref": "config.yaml#security"
+    },
+    {
+      "source": "POLICY:合规约束",
+      "target": "H1",
+      "relation": "applies_to",
+      "source_ref": "config.yaml#security"
+    },
+    {
+      "source": "H1",
+      "target": "DOC:discovery-report.csv",
+      "relation": "based_on",
+      "source_ref": "discovery-report.csv#2"
+    },
+    {
+      "source": "H1",
+      "target": "FACT:education-support-f10",
+      "relation": "cites",
+      "source_ref": "discovery-report.csv#2"
+    },
+    {
+      "source": "H1",
+      "target": "FACT:education-support-f12",
+      "relation": "cites",
+      "source_ref": "discovery-report.csv#2"
+    },
+    {
+      "source": "H1",
+      "target": "FACT:education-support-f01",
+      "relation": "cites",
+      "source_ref": "discovery-report.csv#2"
+    },
+    {
+      "source": "H1",
+      "target": "FACT:education-support-f02",
+      "relation": "cites",
+      "source_ref": "discovery-report.csv#2"
+    },
+    {
+      "source": "H1",
+      "target": "FACT:education-support-f51",
+      "relation": "cites",
+      "source_ref": "discovery-report.csv#2"
+    },
+    {
+      "source": "H1",
+      "target": "ROLE:顾明岚",
+      "relation": "owned_by",
+      "source_ref": "discovery-report.csv#2"
+    },
+    {
+      "source": "H1",
+      "target": "ROLE:林亦舟",
+      "relation": "owned_by",
+      "source_ref": "discovery-report.csv#2"
+    },
+    {
+      "source": "POLICY:合规约束",
+      "target": "H2",
+      "relation": "applies_to",
+      "source_ref": "config.yaml#security"
+    },
+    {
+      "source": "H2",
+      "target": "DOC:discovery-report.csv",
+      "relation": "based_on",
+      "source_ref": "discovery-report.csv#3"
+    },
+    {
+      "source": "H2",
+      "target": "FACT:education-support-f23",
+      "relation": "cites",
+      "source_ref": "discovery-report.csv#3"
+    },
+    {
+      "source": "H2",
+      "target": "FACT:education-support-f25",
+      "relation": "cites",
+      "source_ref": "discovery-report.csv#3"
+    },
+    {
+      "source": "H2",
+      "target": "FACT:education-support-f14",
+      "relation": "cites",
+      "source_ref": "discovery-report.csv#3"
+    },
+    {
+      "source": "H2",
+      "target": "FACT:education-support-f20",
+      "relation": "cites",
+      "source_ref": "discovery-report.csv#3"
+    },
+    {
+      "source": "H2",
+      "target": "ROLE:唐映秋",
+      "relation": "owned_by",
+      "source_ref": "discovery-report.csv#3"
+    },
+    {
+      "source": "POLICY:合规约束",
+      "target": "H3",
+      "relation": "applies_to",
+      "source_ref": "config.yaml#security"
+    },
+    {
+      "source": "H3",
+      "target": "DOC:discovery-report.csv",
+      "relation": "based_on",
+      "source_ref": "discovery-report.csv#4"
+    },
+    {
+      "source": "H3",
+      "target": "FACT:education-support-f40",
+      "relation": "cites",
+      "source_ref": "discovery-report.csv#4"
+    },
+    {
+      "source": "H3",
+      "target": "FACT:education-support-f11",
+      "relation": "cites",
+      "source_ref": "discovery-report.csv#4"
+    },
+    {
+      "source": "H3",
+      "target": "FACT:education-support-f31",
+      "relation": "cites",
+      "source_ref": "discovery-report.csv#4"
+    },
+    {
+      "source": "H3",
+      "target": "FACT:education-support-f15",
+      "relation": "cites",
+      "source_ref": "discovery-report.csv#4"
+    },
+    {
+      "source": "H3",
+      "target": "FACT:education-support-f45",
+      "relation": "cites",
+      "source_ref": "discovery-report.csv#4"
+    },
+    {
+      "source": "H3",
+      "target": "FACT:education-support-f42",
+      "relation": "cites",
+      "source_ref": "discovery-report.csv#4"
+    },
+    {
+      "source": "H3",
+      "target": "ROLE:傅景",
+      "relation": "owned_by",
+      "source_ref": "discovery-report.csv#4"
+    },
+    {
+      "source": "POLICY:合规约束",
+      "target": "H4",
+      "relation": "applies_to",
+      "source_ref": "config.yaml#security"
+    },
+    {
+      "source": "H4",
+      "target": "DOC:discovery-report.csv",
+      "relation": "based_on",
+      "source_ref": "discovery-report.csv#5"
+    },
+    {
+      "source": "H4",
+      "target": "FACT:education-support-f30",
+      "relation": "cites",
+      "source_ref": "discovery-report.csv#5"
+    },
+    {
+      "source": "H4",
+      "target": "FACT:education-support-f31",
+      "relation": "cites",
+      "source_ref": "discovery-report.csv#5"
+    },
+    {
+      "source": "H4",
+      "target": "FACT:education-support-f33",
+      "relation": "cites",
+      "source_ref": "discovery-report.csv#5"
+    },
+    {
+      "source": "H4",
+      "target": "FACT:education-support-f32",
+      "relation": "cites",
+      "source_ref": "discovery-report.csv#5"
+    },
+    {
+      "source": "H4",
+      "target": "FACT:education-support-f35",
+      "relation": "cites",
+      "source_ref": "discovery-report.csv#5"
+    },
+    {
+      "source": "H4",
+      "target": "ROLE:秦芮",
+      "relation": "owned_by",
+      "source_ref": "discovery-report.csv#5"
+    },
+    {
+      "source": "POLICY:合规约束",
+      "target": "H5",
+      "relation": "applies_to",
+      "source_ref": "config.yaml#security"
+    },
+    {
+      "source": "H5",
+      "target": "DOC:discovery-report.csv",
+      "relation": "based_on",
+      "source_ref": "discovery-report.csv#6"
+    },
+    {
+      "source": "H5",
+      "target": "FACT:education-support-f41",
+      "relation": "cites",
+      "source_ref": "discovery-report.csv#6"
+    },
+    {
+      "source": "H5",
+      "target": "FACT:education-support-f22",
+      "relation": "cites",
+      "source_ref": "discovery-report.csv#6"
+    },
+    {
+      "source": "H5",
+      "target": "FACT:education-support-f04",
+      "relation": "cites",
+      "source_ref": "discovery-report.csv#6"
+    },
+    {
+      "source": "H5",
+      "target": "ROLE:顾明岚",
+      "relation": "owned_by",
+      "source_ref": "discovery-report.csv#6"
+    },
+    {
+      "source": "H5",
+      "target": "ROLE:傅景",
+      "relation": "owned_by",
+      "source_ref": "discovery-report.csv#6"
+    },
+    {
+      "source": "POLICY:合规约束",
+      "target": "H6",
+      "relation": "applies_to",
+      "source_ref": "config.yaml#security"
+    },
+    {
+      "source": "H6",
+      "target": "DOC:discovery-report.csv",
+      "relation": "based_on",
+      "source_ref": "discovery-report.csv#7"
+    },
+    {
+      "source": "H6",
+      "target": "FACT:education-support-f53",
+      "relation": "cites",
+      "source_ref": "discovery-report.csv#7"
+    },
+    {
+      "source": "H6",
+      "target": "FACT:education-support-f50",
+      "relation": "cites",
+      "source_ref": "discovery-report.csv#7"
+    },
+    {
+      "source": "H6",
+      "target": "FACT:education-support-f51",
+      "relation": "cites",
+      "source_ref": "discovery-report.csv#7"
+    },
+    {
+      "source": "H6",
+      "target": "FACT:education-support-f55",
+      "relation": "cites",
+      "source_ref": "discovery-report.csv#7"
+    },
+    {
+      "source": "H6",
+      "target": "ROLE:顾明岚",
+      "relation": "owned_by",
+      "source_ref": "discovery-report.csv#7"
+    },
+    {
+      "source": "H6",
+      "target": "ROLE:叶书",
+      "relation": "owned_by",
+      "source_ref": "discovery-report.csv#7"
+    }
+  ],
+  "meta": {
+    "source_documents": [
+      "业务挖掘报告",
+      "现场调研报告",
+      "discovery-report.json",
+      "discovery-report.md",
+      "discovery-report.csv",
+      "四份可核对资料",
+      "现状流程图"
+    ],
+    "fact_count": 25,
+    "forbid_as_behavior_evidence": true
+  }
+}
