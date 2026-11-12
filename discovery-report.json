@@ -1,0 +1,1809 @@
+{
+  "title": "北辰在线学院 · 业务需求发现报告",
+  "generatedAt": "2026-11-05T05:41:18.812Z",
+  "library": "general",
+  "publicSources": [],
+  "case": "学习掉队以后才收到提醒",
+  "industry": "教育",
+  "opening": "我们在“学习支持与辅导协作”上投入了很多人力。学生问题散在群聊和作业评论里，助教常漏掉连续求助。管理层希望用 AI 改善，但还没有确定优先环节、验收标准和权限边界。请你先和各岗位聊聊，找出值得验证的业务需求。",
+  "coverage": {
+    "found": 36,
+    "total": 36,
+    "percent": 100
+  },
+  "note": "本报告基于合成场景访谈；需求为待验证假设。采集完整不等于真实业务需求已确认。",
+  "requirements": [
+    {
+      "title": "学习支持与辅导协作：明确业务目标与试点条件",
+      "owner": "学习服务主任",
+      "status": "已完成角色事实采集，仍需试点验证",
+      "priority": "P1",
+      "evidence": [
+        {
+          "id": "education-support-f00",
+          "source": "教育-001 · 访谈事实记录",
+          "text": "支持请求首次响应 26 小时，目标 8 小时；重复求助率 35%，目标 15%",
+          "character": "顾明岚"
+        },
+        {
+          "id": "education-support-f01",
+          "source": "教育-002 · 业务事件样本",
+          "text": "当前主流程是：学习记录 → 支持需求识别 → 助教联系 → 辅导安排 → 反馈 → 复盘。管理层还没有分别量出每个节点的等待和处理时间。",
+          "character": "顾明岚"
+        },
+        {
+          "id": "education-support-f02",
+          "source": "教育-003 · 流程与约束说明",
+          "text": "两个班级试点，求助漏单低于 2%，人工确认后再联系学生",
+          "character": "顾明岚"
+        },
+        {
+          "id": "education-support-f03",
+          "source": "教育-019 · 执行条件记录",
+          "text": "首期可用预算 9 万元，包含集成、培训与验证。收益要扣除维护及人工复核成本，不能把全部节省工时当作现金回款。",
+          "character": "顾明岚"
+        },
+        {
+          "id": "education-support-f05",
+          "source": "教育-021 · 验证与反馈记录",
+          "text": "求助整理与支持建议，不自动给学生定性或评分。首期采用历史资料回放，再做小范围并行试点，不直接替换现有业务。",
+          "character": "顾明岚"
+        },
+        {
+          "id": "education-support-f04",
+          "source": "教育-020 · 协作规则记录",
+          "text": "立项由学习服务主任推动；教育数据专员可以因关键风险否决上线，课程讲师参与服务结果验收。",
+          "character": "顾明岚"
+        }
+      ],
+      "acceptance": "两个班级试点，求助漏单低于 2%，人工确认后再联系学生"
+    },
+    {
+      "title": "学习支持与辅导协作：一线异常与操作辅助",
+      "owner": "助教",
+      "status": "已完成角色事实采集，仍需试点验证",
+      "priority": "P1",
+      "evidence": [
+        {
+          "id": "education-support-f11",
+          "source": "教育-005 · 业务事件样本",
+          "text": "视频播放时长高但实际挂着播放器，不能认定已经理解",
+          "character": "林亦舟"
+        },
+        {
+          "id": "education-support-f15",
+          "source": "教育-024 · 验证与反馈记录",
+          "text": "建议必须显示对应原记录和待确认字段。发生“视频播放时长高但实际挂着播放器，不能认定已经理解”时，我会暂停该建议，由课程运营员核对后继续，错误结果不能覆盖原记录。",
+          "character": "林亦舟"
+        },
+        {
+          "id": "education-support-f12",
+          "source": "教育-006 · 流程与约束说明",
+          "text": "每周 900 条求助，助教分类与转交每条约 6 分钟",
+          "character": "林亦舟"
+        },
+        {
+          "id": "education-support-f10",
+          "source": "教育-004 · 访谈事实记录",
+          "text": "学生问题散在群聊和作业评论里，助教常漏掉连续求助",
+          "character": "林亦舟"
+        },
+        {
+          "id": "education-support-f13",
+          "source": "教育-022 · 执行条件记录",
+          "text": "现场执行围绕“学习支持与辅导协作”。高峰期只能使用现有终端，离开业务现场去补录会延误处理；草稿应可暂存，并明确最后同步时间。",
+          "character": "林亦舟"
+        },
+        {
+          "id": "education-support-f14",
+          "source": "教育-023 · 协作规则记录",
+          "text": "因为“学生问题散在群聊和作业评论里，助教常漏掉连续求助”，同事经常把关键说明留在个人便签或群里，再补进正式记录；这些说明目前没有随单据交接。",
+          "character": "林亦舟"
+        }
+      ],
+      "acceptance": "每周 900 条求助，助教分类与转交每条约 6 分钟"
+    },
+    {
+      "title": "学习支持与辅导协作：流程规则与责任交接",
+      "owner": "课程运营员",
+      "status": "已完成角色事实采集，仍需试点验证",
+      "priority": "P0",
+      "evidence": [
+        {
+          "id": "education-support-f20",
+          "source": "教育-007 · 访谈事实记录",
+          "text": "学习记录 → 支持需求识别 → 助教联系 → 辅导安排 → 反馈 → 复盘。我负责把每一步的输入、输出和待办责任人写清楚；退回原步骤必须保留原因。",
+          "character": "唐映秋"
+        },
+        {
+          "id": "education-support-f25",
+          "source": "教育-027 · 验证与反馈记录",
+          "text": "异常先由课程运营员分派给实际处理人；超过约定时限再升级到学习服务主任。跨岗问题不能只写“已转交”，需要明确下一责任人。",
+          "character": "唐映秋"
+        },
+        {
+          "id": "education-support-f21",
+          "source": "教育-008 · 业务事件样本",
+          "text": "学习日志、作业反馈、求助标签和辅导记录",
+          "character": "唐映秋"
+        },
+        {
+          "id": "education-support-f23",
+          "source": "教育-025 · 执行条件记录",
+          "text": "交接至少包含业务编号、当前版本、处理状态、未解决事项和接手人。对方确认接手才结束本岗待办，仅发送消息不算完成。",
+          "character": "唐映秋"
+        },
+        {
+          "id": "education-support-f24",
+          "source": "教育-026 · 协作规则记录",
+          "text": "与“学习支持与辅导协作”相关规则由业务负责人维护，按生效日期和适用范围选版本。规则冲突时附两个版本给教育数据专员，不自行合并或选较宽松条款。",
+          "character": "唐映秋"
+        },
+        {
+          "id": "education-support-f22",
+          "source": "教育-009 · 流程与约束说明",
+          "text": "我的岗位是课程运营员，可以整理、校核和发起复核；不能代替教育数据专员完成专业签核，也不能自行批准“求助整理与支持建议，不自动给学生定性或评分”以外操作。",
+          "character": "唐映秋"
+        }
+      ],
+      "acceptance": "我的岗位是课程运营员，可以整理、校核和发起复核；不能代替教育数据专员完成专业签核，也不能自行批准“求助整理与支持建议，不自动给学生定性或评分”以外操作。"
+    },
+    {
+      "title": "学习支持与辅导协作：数据口径与接口治理",
+      "owner": "学习平台工程师",
+      "status": "已完成角色事实采集，仍需试点验证",
+      "priority": "P1",
+      "evidence": [
+        {
+          "id": "education-support-f35",
+          "source": "教育-030 · 验证与反馈记录",
+          "text": "接口中断时继续使用带时间戳的上一份只读快照，并显示“暂未更新”。重连后按业务编号去重补齐，不反复触发同一待办；现有人工流程继续运行。",
+          "character": "秦芮"
+        },
+        {
+          "id": "education-support-f34",
+          "source": "教育-029 · 协作规则记录",
+          "text": "本次试点计划每小时更新已授权的业务状态，原始资料按版本更新；信息超过一个更新周期就标为待刷新，不能作为实时承诺。",
+          "character": "秦芮"
+        },
+        {
+          "id": "education-support-f33",
+          "source": "教育-028 · 执行条件记录",
+          "text": "先校验“学习日志、作业反馈、求助标签和辅导记录”里的主编号、事件时间和版本字段。学习活跃度不等于理解，作业补交与撤回事件缺少统一编号；有歧义的记录进入人工修复队列，不进入自动推荐样本。",
+          "character": "秦芮"
+        },
+        {
+          "id": "education-support-f31",
+          "source": "教育-011 · 业务事件样本",
+          "text": "学习活跃度不等于理解，作业补交与撤回事件缺少统一编号",
+          "character": "秦芮"
+        },
+        {
+          "id": "education-support-f32",
+          "source": "教育-012 · 流程与约束说明",
+          "text": "可读学习事件，不能自动给学生成绩或纪律处分",
+          "character": "秦芮"
+        },
+        {
+          "id": "education-support-f30",
+          "source": "教育-010 · 访谈事实记录",
+          "text": "我们正在使用LMS、直播平台与辅导工单，各系统账号权限独立维护，业务状态尚没有统一视图。",
+          "character": "秦芮"
+        }
+      ],
+      "acceptance": "可读学习事件，不能自动给学生成绩或纪律处分"
+    },
+    {
+      "title": "学习支持与辅导协作：约束核验与人工兜底",
+      "owner": "教育数据专员",
+      "status": "已完成角色事实采集，仍需试点验证",
+      "priority": "P0",
+      "evidence": [
+        {
+          "id": "education-support-f41",
+          "source": "教育-014 · 业务事件样本",
+          "text": "只有授权的业务岗位可以查看“学习日志、作业反馈、求助标签和辅导记录”。涉及最终决定、对外承诺或资产变更，要由对应审批人确认，不能借用其他人的账号。",
+          "character": "傅景"
+        },
+        {
+          "id": "education-support-f44",
+          "source": "教育-032 · 协作规则记录",
+          "text": "出现“视频播放时长高但实际挂着播放器，不能认定已经理解”、资料缺少依据、两个版本冲突或关键系统不可用时转人工。需要标注触发原因、接手人和确认时间，不能只给一句模糊提醒。",
+          "character": "傅景"
+        },
+        {
+          "id": "education-support-f45",
+          "source": "教育-033 · 验证与反馈记录",
+          "text": "每次建议保留业务编号、资料版本、事实引用、建议结果、人工改动和签核人。审计时应能重建“学习记录 → 支持需求识别 → 助教联系 → 辅导安排 → 反馈 → 复盘”中的这次处理，不记录账号口令或不必要的个人信息。",
+          "character": "傅景"
+        },
+        {
+          "id": "education-support-f43",
+          "source": "教育-031 · 执行条件记录",
+          "text": "试点原始资料按本场景授权范围保存；本轮评价记录暂保留 90 天，期满由教育数据专员复核删除或归档。真实期限仍须按组织规则另行确定。",
+          "character": "傅景"
+        },
+        {
+          "id": "education-support-f42",
+          "source": "教育-015 · 流程与约束说明",
+          "text": "两个班级试点，求助漏单低于 2%，人工确认后再联系学生；同时检查“不依据个人敏感属性判断能力，建议必须附实际行为证据”。只要触及停止条件，就暂停试点并由负责人复盘。",
+          "character": "傅景"
+        },
+        {
+          "id": "education-support-f40",
+          "source": "教育-013 · 访谈事实记录",
+          "text": "不依据个人敏感属性判断能力，建议必须附实际行为证据",
+          "character": "傅景"
+        }
+      ],
+      "acceptance": "两个班级试点，求助漏单低于 2%，人工确认后再联系学生；同时检查“不依据个人敏感属性判断能力，建议必须附实际行为证据”。只要触及停止条件，就暂停试点并由负责人复盘。"
+    },
+    {
+      "title": "学习支持与辅导协作：服务解释与反馈闭环",
+      "owner": "课程讲师",
+      "status": "已完成角色事实采集，仍需试点验证",
+      "priority": "P1",
+      "evidence": [
+        {
+          "id": "education-support-f51",
+          "source": "教育-017 · 业务事件样本",
+          "text": "目前可用工作量基线是：每周 900 条求助，助教分类与转交每条约 6 分钟。服务侧还会逐笔采集交接等待和重新联系次数，不能用发送通知数量代替实际完成量。",
+          "character": "叶书"
+        },
+        {
+          "id": "education-support-f53",
+          "source": "教育-034 · 执行条件记录",
+          "text": "运营统计登录率，讲师统计掌握情况，助教统计求助解决率。需要分别记录各岗完成时间，试点指标固定分母、排除规则和统计周期，不能把同一业务拆成多次“成功”提高比例。",
+          "character": "叶书"
+        },
+        {
+          "id": "education-support-f55",
+          "source": "教育-036 · 验证与反馈记录",
+          "text": "试点每周收集 助教、课程运营员、课程讲师 的误判例子和未解决问题，由学习服务主任确认改进负责人；先复测“两个班级试点，求助漏单低于 2%，人工确认后再联系学生”，再更新规则版本。",
+          "character": "叶书"
+        },
+        {
+          "id": "education-support-f54",
+          "source": "教育-035 · 协作规则记录",
+          "text": "客户或下游反馈优先关联原业务编号和当时使用的资料版本，再查实际交接是否完成。争议由课程讲师受理、课程运营员核对，未经确认不承诺赔偿或结果。",
+          "character": "叶书"
+        },
+        {
+          "id": "education-support-f52",
+          "source": "教育-018 · 流程与约束说明",
+          "text": "求助整理与支持建议，不自动给学生定性或评分",
+          "character": "叶书"
+        },
+        {
+          "id": "education-support-f50",
+          "source": "教育-016 · 访谈事实记录",
+          "text": "运营统计登录率，讲师统计掌握情况，助教统计求助解决率",
+          "character": "叶书"
+        }
+      ],
+      "acceptance": "求助整理与支持建议，不自动给学生定性或评分"
+    }
+  ],
+  "gaps": [],
+  "transcript": [
+    {
+      "id": "turn-1",
+      "speaker": "user",
+      "characterId": "education-support-r0",
+      "text": "这次最希望达成的业务目标是什么？",
+      "at": "2026-11-05T05:30:15.351Z"
+    },
+    {
+      "id": "turn-2",
+      "speaker": "character",
+      "characterId": "education-support-r0",
+      "text": "从学习服务主任的职责看，我最希望先达成的是把首次响应从 26 小时压到 8 小时、把重复求助率从 35% 降到 15% [education-support-f00]。这两个指标直接决定学生是否感到被接住，也决定我们后续是否值得扩大投入。但目标要落地，我需要先明确试点范围：是只覆盖群聊和作业评论中的连续求助，还是也纳入其他渠道；验收是按响应时长和重复求助率双指标，还是先看其中一个。权限边界上，我能推动服务流程和试点组织，但涉及系统改造、数据接口和审核规则，需要平台工程师和数据专员确认，不能由我单方面决定。建议先把试点限定在一个课程或一个助教小组，验证异常处理和人工兜底是否可行，再谈推广。这些是待验证假设，具体范围还需和助教、运营、平台同事对齐。",
+      "at": "2026-11-05T05:30:15.351Z",
+      "factIds": [
+        "education-support-f00"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "7f502535-0739-414f-917e-951c890a9a57",
+        "at": "2026-11-05T05:30:15.351Z",
+        "durationMs": 2056,
+        "usage": {
+          "prompt_tokens": 908,
+          "completion_tokens": 207,
+          "total_tokens": 1115
+        },
+        "attemptCount": 2,
+        "attempts": [
+          {
+            "provider": "DeepSeek",
+            "model": "deepseek-flash",
+            "requestId": "9c31ce2f-83b5-43ef-afce-20ecdcaf0a7b",
+            "at": "2026-11-05T05:30:13.295Z",
+            "durationMs": 2438,
+            "usage": {
+              "prompt_tokens": 832,
+              "completion_tokens": 226,
+              "total_tokens": 1058
+            }
+          },
+          {
+            "provider": "DeepSeek",
+            "model": "deepseek-flash",
+            "requestId": "7f502535-0739-414f-917e-951c890a9a57",
+            "at": "2026-11-05T05:30:15.351Z",
+            "durationMs": 2056,
+            "usage": {
+              "prompt_tokens": 908,
+              "completion_tokens": 207,
+              "total_tokens": 1115
+            }
+          }
+        ],
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "80196a94-f400-4a8d-b473-75ee096353e7",
+          "at": "2026-11-05T05:30:10.857Z",
+          "durationMs": 842,
+          "usage": {
+            "prompt_tokens": 388,
+            "completion_tokens": 11,
+            "total_tokens": 399
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-3",
+      "speaker": "user",
+      "characterId": "education-support-r1",
+      "text": "能给我一个具体的异常或失败例子吗？",
+      "at": "2026-11-05T05:30:41.056Z"
+    },
+    {
+      "id": "turn-4",
+      "speaker": "character",
+      "characterId": "education-support-r1",
+      "text": "最典型的就是“视频播放时长高但实际挂着播放器，不能认定已经理解”[education-support-f11]。这类记录如果被系统当成“已掌握”推给我，我很难在群里逐条分辨，容易把真正连续求助的学生漏掉。所以我的做法是：建议必须显示对应原记录和待确认字段，遇到这种情况我会暂停该建议，由课程运营员核对后继续，错误结果不能覆盖原记录[education-support-f15]。\n\n不过要说明，这只是我现场的处理习惯，能不能固化成流程规则、谁来审批暂停后的交接，尚未核实。你们如果要拿它做试点验收，得先明确：异常判定由谁复核、暂停期间学生问题怎么兜底、以及原记录不可覆盖这条是否写进权限边界。这些不澄清，我不敢承诺现场能稳定执行。",
+      "at": "2026-11-05T05:30:41.056Z",
+      "factIds": [
+        "education-support-f11",
+        "education-support-f15"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "afee5eb5-3c86-4679-8b13-b8cedadd9c9f",
+        "at": "2026-11-05T05:30:41.056Z",
+        "durationMs": 2337,
+        "usage": {
+          "prompt_tokens": 896,
+          "completion_tokens": 193,
+          "total_tokens": 1089
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "b66ef28d-82ca-4b75-83dd-d0152a53e099",
+          "at": "2026-11-05T05:30:38.719Z",
+          "durationMs": 678,
+          "usage": {
+            "prompt_tokens": 405,
+            "completion_tokens": 16,
+            "total_tokens": 421
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-5",
+      "speaker": "user",
+      "characterId": "education-support-r4",
+      "text": "哪些操作必须人工审批，谁有权限？",
+      "at": "2026-11-05T05:30:48.914Z"
+    },
+    {
+      "id": "turn-6",
+      "speaker": "character",
+      "characterId": "education-support-r4",
+      "text": "先按我这边能确认的口径说：只有授权的业务岗位可以查看“学习日志、作业反馈、求助标签和辅导记录”；涉及最终决定、对外承诺或资产变更，必须由对应审批人确认，不能借用他人账号 [education-support-f41]。\n\n但“哪些具体操作逐项对应哪位审批人”，目前尚未核实，我不便替你列清单。我的建议是先把审批点按三类拆开——最终决定、对外承诺、资产变更——再逐项挂到具体岗位和审批人上，这属于待验证假设，需要顾明岚从试点决策角度确认，秦芮核对系统侧能否留痕。\n\n另外提醒一点：如果 AI 给出的是“疑似未理解”这类判断，它只能作为转人工的触发，不能替代审批。触发原因、接手人和确认时间都要标注，不能只给一句模糊提醒 [education-support-f44]。你这边想先核哪一类操作？",
+      "at": "2026-11-05T05:30:48.914Z",
+      "factIds": [
+        "education-support-f41",
+        "education-support-f44"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "8da75f5d-ee56-4a3a-b176-af9d5bfbc1c4",
+        "at": "2026-11-05T05:30:48.914Z",
+        "durationMs": 2145,
+        "usage": {
+          "prompt_tokens": 925,
+          "completion_tokens": 220,
+          "total_tokens": 1145
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "38fc8364-889e-4031-819d-2f41bbfd80fa",
+          "at": "2026-11-05T05:30:46.769Z",
+          "durationMs": 991,
+          "usage": {
+            "prompt_tokens": 470,
+            "completion_tokens": 21,
+            "total_tokens": 491
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-7",
+      "speaker": "user",
+      "characterId": "education-support-r2",
+      "text": "请讲讲现在实际的处理流程。",
+      "at": "2026-11-05T05:30:57.543Z"
+    },
+    {
+      "id": "turn-8",
+      "speaker": "character",
+      "characterId": "education-support-r2",
+      "text": "我先把流程按“输入—输出—待办责任人”拆开：学习记录进入后识别支持需求，再由助教联系、安排辅导，之后收反馈并复盘；每一步我都要写清输入、输出和待办责任人，退回原步骤必须保留原因 [education-support-f20]。异常处理上，先由我分派给实际处理人，超过约定时限再升级到学习服务主任；跨岗问题不能只写“已转交”，必须明确下一责任人 [education-support-f25]。\n\n但“约定时限”具体是多少、升级后由谁闭环，目前尚未核实。我关心的是：交接不清会直接落到我这边返工，也会让助教漏掉连续求助。你们希望优先验证哪一段交接？验收时是看退回原因是否完整，还是看跨岗问题是否都有明确下一责任人？这需要先定口径，否则我无法判断流程是否真的改好。",
+      "at": "2026-11-05T05:30:57.543Z",
+      "factIds": [
+        "education-support-f20",
+        "education-support-f25"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "74862253-9984-437a-b322-de001fc19fe0",
+        "at": "2026-11-05T05:30:57.543Z",
+        "durationMs": 2150,
+        "usage": {
+          "prompt_tokens": 914,
+          "completion_tokens": 215,
+          "total_tokens": 1129
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "ee25a0ae-5b6e-4350-8ba5-55374a1dff8d",
+          "at": "2026-11-05T05:30:55.393Z",
+          "durationMs": 595,
+          "usage": {
+            "prompt_tokens": 433,
+            "completion_tokens": 26,
+            "total_tokens": 459
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-9",
+      "speaker": "user",
+      "characterId": "education-support-r1",
+      "text": "有多少单、花多久，有统计样本吗？",
+      "at": "2026-11-05T05:31:31.226Z"
+    },
+    {
+      "id": "turn-10",
+      "speaker": "character",
+      "characterId": "education-support-r1",
+      "text": "我这边能直接给出的现场口径是：每周约 900 条求助，助教分类与转交每条约 6 分钟[education-support-f12]。这是流程与约束说明里的数，不是我逐条掐表统计的样本，所以只能当量级参考，不能当验收基线。\n\n如果你们要拿它做试点测算，我建议先明确统计口径：这 900 条是否含群聊和作业评论两处、重复求助算一条还是多条、6 分钟是否含核对原记录和交接确认。这些尚未核实，需要课程运营员和平台工程师一起对齐。对我现场来说，更关心的是异常单占比和暂停后谁兜底，否则总量再准也说明不了漏求助的问题。",
+      "at": "2026-11-05T05:31:31.226Z",
+      "factIds": [
+        "education-support-f12"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "2ef157b7-de50-45a1-b507-61a373aa7fca",
+        "at": "2026-11-05T05:31:31.226Z",
+        "durationMs": 2145,
+        "usage": {
+          "prompt_tokens": 1048,
+          "completion_tokens": 173,
+          "total_tokens": 1221
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "ac7e66e2-db22-4240-8b2c-bf370b92c160",
+          "at": "2026-11-05T05:31:29.081Z",
+          "durationMs": 402,
+          "usage": {
+            "prompt_tokens": 627,
+            "completion_tokens": 11,
+            "total_tokens": 638
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-11",
+      "speaker": "user",
+      "characterId": "education-support-r1",
+      "text": "你日常有哪些痛点，最费时间的环节是什么？",
+      "at": "2026-11-05T05:31:51.317Z"
+    },
+    {
+      "id": "turn-12",
+      "speaker": "character",
+      "characterId": "education-support-r1",
+      "text": "最直接的痛点就是学生问题散在群聊和作业评论里，我常漏掉连续求助[education-support-f10]。同一个人隔一会儿再问一次，如果我没连着看，很容易当成新问题处理，或者干脆没看到。\n\n最费时间的环节是分类与转交：每周约 900 条求助，每条约 6 分钟[education-support-f12]。但这两个数只能当量级参考，不是逐条掐表的样本，能不能当验收基线尚未核实。\n\n对我现场来说，真正耗神的不是单条处理，而是核对原记录和判断要不要暂停建议——比如播放时长高但实际挂着播放器那种记录，我不能直接当已掌握推给学生。所以如果你们要定优先环节，我建议先明确：异常单占比多少、暂停后谁兜底、统计口径是否含群聊和作业评论两处。这些不澄清，我不好承诺现场能稳定执行。",
+      "at": "2026-11-05T05:31:51.317Z",
+      "factIds": [
+        "education-support-f10",
+        "education-support-f12"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "93cc4d05-6b64-466a-9015-ae7d80403d08",
+        "at": "2026-11-05T05:31:51.316Z",
+        "durationMs": 2242,
+        "usage": {
+          "prompt_tokens": 1293,
+          "completion_tokens": 219,
+          "total_tokens": 1512
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "31c76245-21e1-42d7-b98c-3235c8b16328",
+          "at": "2026-11-05T05:31:49.074Z",
+          "durationMs": 880,
+          "usage": {
+            "prompt_tokens": 828,
+            "completion_tokens": 21,
+            "total_tokens": 849
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-13",
+      "speaker": "user",
+      "characterId": "education-support-r1",
+      "text": "现场操作有什么限制，设备和网络情况怎样？",
+      "at": "2026-11-05T05:32:00.624Z"
+    },
+    {
+      "id": "turn-14",
+      "speaker": "character",
+      "characterId": "education-support-r1",
+      "text": "现场执行这块，我能确认的是：高峰期只能用现有终端，离开业务现场去补录会延误处理；草稿应可暂存，并明确最后同步时间[education-support-f13]。这对我很关键——学生问题散在群聊和作业评论里，我一旦离开现场去补录，连续求助更容易漏掉。\n\n但设备和网络的具体情况，比如终端数量、是否共用、断网时草稿能存多久、同步失败怎么提示，这些尚未核实，我不能替平台工程师下结论。如果你们要把“草稿暂存+最后同步时间”写进试点验收，我建议先和秦芮对齐接口能力，再明确同步失败时由谁兜底、学生问题在暂停期间怎么接续。这些不澄清，我不敢承诺高峰期现场能稳定执行。",
+      "at": "2026-11-05T05:32:00.624Z",
+      "factIds": [
+        "education-support-f13"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "dd4188ea-cd10-4223-ac1e-1134fe625ab5",
+        "at": "2026-11-05T05:32:00.624Z",
+        "durationMs": 2011,
+        "usage": {
+          "prompt_tokens": 1590,
+          "completion_tokens": 185,
+          "total_tokens": 1775
+        },
+        "attemptCount": 2,
+        "attempts": [
+          {
+            "provider": "DeepSeek",
+            "model": "deepseek-flash",
+            "requestId": "3b700607-02c1-4629-8b23-31aa2c133710",
+            "at": "2026-11-05T05:31:58.613Z",
+            "durationMs": 2063,
+            "usage": {
+              "prompt_tokens": 1514,
+              "completion_tokens": 198,
+              "total_tokens": 1712
+            }
+          },
+          {
+            "provider": "DeepSeek",
+            "model": "deepseek-flash",
+            "requestId": "dd4188ea-cd10-4223-ac1e-1134fe625ab5",
+            "at": "2026-11-05T05:32:00.624Z",
+            "durationMs": 2011,
+            "usage": {
+              "prompt_tokens": 1590,
+              "completion_tokens": 185,
+              "total_tokens": 1775
+            }
+          }
+        ],
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "d1bcda2c-6e44-4449-94dc-52a54cf1162c",
+          "at": "2026-11-05T05:31:56.550Z",
+          "durationMs": 455,
+          "usage": {
+            "prompt_tokens": 1074,
+            "completion_tokens": 11,
+            "total_tokens": 1085
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-15",
+      "speaker": "user",
+      "characterId": "education-support-r1",
+      "text": "一线有什么绕开系统的习惯，原因是什么？",
+      "at": "2026-11-05T05:32:33.838Z"
+    },
+    {
+      "id": "turn-16",
+      "speaker": "character",
+      "characterId": "education-support-r1",
+      "text": "有，而且这个习惯直接影响交接。因为学生问题散在群聊和作业评论里，我常漏掉连续求助[education-support-f10]，所以关键说明我习惯先留在个人便签或群里，事后再补进正式记录；但这些说明目前没有随单据交接[education-support-f14]。\n\n原因很实际：现场节奏快，先记下来能保证不漏，正式记录反而滞后。但代价是接手的人看不到我当时的判断依据，异常单暂停后谁兜底就容易断档。\n\n如果你们要把这个习惯纳入试点，我建议先明确：便签和群里的说明算不算正式依据、补录的时限和责任人是谁、交接时以哪份为准。这些尚未核实，需要课程运营员和平台工程师一起定口径。对我现场来说，只要交接能带上这些说明，我愿意改掉只留便签的做法。",
+      "at": "2026-11-05T05:32:33.838Z",
+      "factIds": [
+        "education-support-f10",
+        "education-support-f14"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "e033cdd1-d7f0-462c-a143-822b232398bc",
+        "at": "2026-11-05T05:32:33.838Z",
+        "durationMs": 2284,
+        "usage": {
+          "prompt_tokens": 1778,
+          "completion_tokens": 206,
+          "total_tokens": 1984
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "3ea85913-0068-4739-9466-b663123a76aa",
+          "at": "2026-11-05T05:32:31.554Z",
+          "durationMs": 358,
+          "usage": {
+            "prompt_tokens": 1286,
+            "completion_tokens": 16,
+            "total_tokens": 1302
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-17",
+      "speaker": "user",
+      "characterId": "education-support-r0",
+      "text": "请讲讲现在实际的处理流程。",
+      "at": "2026-11-05T05:32:54.416Z"
+    },
+    {
+      "id": "turn-18",
+      "speaker": "character",
+      "characterId": "education-support-r0",
+      "text": "当前主流程是：学习记录 → 支持需求识别 → 助教联系 → 辅导安排 → 反馈 → 复盘 [education-support-f01]。但管理层还没有分别量出每个节点的等待和处理时间 [education-support-f01]，所以我现在没法判断 26 小时首次响应 [education-support-f00] 到底卡在识别、联系还是排期上。这直接影响我定试点范围：如果卡点在识别，试点要优先解决群聊和作业评论里的连续求助漏接；如果卡在排期，光改识别没用。我这边能推动流程梳理和试点组织，但节点耗时数据要平台和助教侧配合才能拿到，不能由我单方面认定。建议先按这个流程做一次节点耗时摸底，再决定试点覆盖一个课程还是一个助教小组。这是待验证假设，具体口径还需和秦芮、林亦舟对齐。",
+      "at": "2026-11-05T05:32:54.416Z",
+      "factIds": [
+        "education-support-f01",
+        "education-support-f00"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "f9dc9a61-0d43-4924-9174-73fd1b05a68b",
+        "at": "2026-11-05T05:32:54.416Z",
+        "durationMs": 2023,
+        "usage": {
+          "prompt_tokens": 1130,
+          "completion_tokens": 205,
+          "total_tokens": 1335
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "b8602247-8191-41a1-af35-eabb63231ef6",
+          "at": "2026-11-05T05:32:52.393Z",
+          "durationMs": 1169,
+          "usage": {
+            "prompt_tokens": 620,
+            "completion_tokens": 16,
+            "total_tokens": 636
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-19",
+      "speaker": "user",
+      "characterId": "education-support-r0",
+      "text": "怎么验收成功？试点标准是什么？",
+      "at": "2026-11-05T05:33:28.339Z"
+    },
+    {
+      "id": "turn-20",
+      "speaker": "character",
+      "characterId": "education-support-r0",
+      "text": "验收我倾向用可核验的硬指标，而不是“感觉好多了”。目前能作为依据的是：两个班级试点，求助漏单低于 2%，且必须人工确认后再联系学生 [education-support-f02]；同时首次响应从 26 小时压到 8 小时、重复求助率从 35% 降到 15% [education-support-f00]。但这里有个口径问题需要先澄清：漏单率按什么分母算、连续求助怎么算一单、响应时长从学生发出算还是从被识别算，这些尚未核实，不能由我单方面定。试点范围我建议先限定两个班级、一个助教小组，验证异常处理和人工兜底跑得通再谈推广。另外“人工确认后再联系”是合规红线，AI 只能做识别和提示，不能直接触达学生。这些是待验证假设，具体口径要和秦芮、林亦舟、傅景对齐后才能写进验收。",
+      "at": "2026-11-05T05:33:28.339Z",
+      "factIds": [
+        "education-support-f02",
+        "education-support-f00"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "db180f6f-c176-465d-8a69-1a4bd002cbd6",
+        "at": "2026-11-05T05:33:28.339Z",
+        "durationMs": 1868,
+        "usage": {
+          "prompt_tokens": 1338,
+          "completion_tokens": 224,
+          "total_tokens": 1562
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "63adb945-feae-4411-ac89-69482bae301e",
+          "at": "2026-11-05T05:33:26.470Z",
+          "durationMs": 608,
+          "usage": {
+            "prompt_tokens": 850,
+            "completion_tokens": 21,
+            "total_tokens": 871
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-21",
+      "speaker": "user",
+      "characterId": "education-support-r0",
+      "text": "试点预算是多少，成本怎样核算？",
+      "at": "2026-11-05T05:34:05.183Z"
+    },
+    {
+      "id": "turn-22",
+      "speaker": "character",
+      "characterId": "education-support-r0",
+      "text": "首期可用预算 9 万元，覆盖集成、培训与验证三块 [education-support-f03]。核算上我坚持两条：一是收益要扣掉维护和人工复核成本，不能把节省的工时直接当现金回款 [education-support-f03]；二是这 9 万是首期盘子，试点范围一旦超出两个班级、一个助教小组，集成和培训成本会跟着涨，我这边没有追加预算的权限，得走审批。所以我想先跟你确认：试点是限定在两个班级内验证，还是要覆盖更多渠道？如果只验证连续求助漏接和人工兜底，9 万够用；如果要动系统接口，得先让秦芮给出集成工作量，否则成本口径没法写进验收。另外人工复核这块的工时怎么折算，目前尚未核实，建议和傅景对齐后再定。",
+      "at": "2026-11-05T05:34:05.183Z",
+      "factIds": [
+        "education-support-f03"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "7e1b1b47-c65e-4fda-b696-a2b5f3b9bdb2",
+        "at": "2026-11-05T05:34:05.183Z",
+        "durationMs": 2281,
+        "usage": {
+          "prompt_tokens": 1554,
+          "completion_tokens": 194,
+          "total_tokens": 1748
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "0ead3fde-55e7-4273-81f9-8c006d94cafd",
+          "at": "2026-11-05T05:34:02.902Z",
+          "durationMs": 535,
+          "usage": {
+            "prompt_tokens": 1099,
+            "completion_tokens": 11,
+            "total_tokens": 1110
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-23",
+      "speaker": "user",
+      "characterId": "education-support-r0",
+      "text": "首期优先做什么，试点覆盖哪里？",
+      "at": "2026-11-05T05:34:27.261Z"
+    },
+    {
+      "id": "turn-24",
+      "speaker": "character",
+      "characterId": "education-support-r0",
+      "text": "首期我倾向先做“求助整理与支持建议”，不自动给学生定性或评分，先历史资料回放，再小范围并行试点，不直接替换现有业务 [education-support-f05]。覆盖范围我建议限定两个班级、一个助教小组，验收看求助漏单低于 2%，且必须人工确认后再联系学生 [education-support-f02]。这样安排是因为我这边能推动流程和试点组织，但系统接口、数据口径和审核规则不在我权限内，得秦芮和傅景确认。需要你澄清一点：试点是只验证群聊和作业评论里的连续求助漏接，还是也要纳入其他渠道？范围不同，集成和培训投入差别很大，而我没有追加预算的权限。另外“漏单”的分母和“连续求助算一单”的口径尚未核实，建议先和林亦舟、秦芮对齐再写进验收。",
+      "at": "2026-11-05T05:34:27.261Z",
+      "factIds": [
+        "education-support-f05",
+        "education-support-f02"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "82e312d3-afcc-4be3-b2e0-c9e7164851d7",
+        "at": "2026-11-05T05:34:27.261Z",
+        "durationMs": 2226,
+        "usage": {
+          "prompt_tokens": 1892,
+          "completion_tokens": 208,
+          "total_tokens": 2100
+        },
+        "attemptCount": 2,
+        "attempts": [
+          {
+            "provider": "DeepSeek",
+            "model": "deepseek-flash",
+            "requestId": "44b24cf7-5d55-404d-abd8-e70a5853706e",
+            "at": "2026-11-05T05:34:25.035Z",
+            "durationMs": 1975,
+            "usage": {
+              "prompt_tokens": 1816,
+              "completion_tokens": 198,
+              "total_tokens": 2014
+            }
+          },
+          {
+            "provider": "DeepSeek",
+            "model": "deepseek-flash",
+            "requestId": "82e312d3-afcc-4be3-b2e0-c9e7164851d7",
+            "at": "2026-11-05T05:34:27.261Z",
+            "durationMs": 2226,
+            "usage": {
+              "prompt_tokens": 1892,
+              "completion_tokens": 208,
+              "total_tokens": 2100
+            }
+          }
+        ],
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "c170a598-63dd-49a3-a41f-6a2b05b2cc9d",
+          "at": "2026-11-05T05:34:23.060Z",
+          "durationMs": 675,
+          "usage": {
+            "prompt_tokens": 1319,
+            "completion_tokens": 26,
+            "total_tokens": 1345
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-25",
+      "speaker": "user",
+      "characterId": "education-support-r0",
+      "text": "谁参与决策，谁可以否决方案？",
+      "at": "2026-11-05T05:34:40.157Z"
+    },
+    {
+      "id": "turn-26",
+      "speaker": "character",
+      "characterId": "education-support-r0",
+      "text": "决策链我先说清楚：立项由我推动，教育数据专员可以因关键风险否决上线，课程讲师参与服务结果验收 [education-support-f04]。这意味着我能定试点范围和推进节奏，但方案里只要涉及风险控制、数据口径或审核规则，傅景的否决权是实打实的，我不能绕过；叶书那边则决定服务结果认不认。所以我想跟你确认：你问否决权，是担心方案被卡，还是想提前把否决条件写进验收？如果是后者，建议在试点方案里单列风险触发项，由傅景确认口径，我这边负责组织对齐。另外，系统接口和集成条件不在我权限内，需要秦芮给出结论，这部分尚未核实，不能由我单方面承诺。",
+      "at": "2026-11-05T05:34:40.157Z",
+      "factIds": [
+        "education-support-f04"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "013f9d1b-7b33-464e-979c-edd1353d022c",
+        "at": "2026-11-05T05:34:40.157Z",
+        "durationMs": 2041,
+        "usage": {
+          "prompt_tokens": 1997,
+          "completion_tokens": 174,
+          "total_tokens": 2171
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "561a9a24-42cc-4d8f-9320-09594d088e42",
+          "at": "2026-11-05T05:34:38.116Z",
+          "durationMs": 596,
+          "usage": {
+            "prompt_tokens": 1553,
+            "completion_tokens": 11,
+            "total_tokens": 1564
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-27",
+      "speaker": "user",
+      "characterId": "education-support-r2",
+      "text": "可以提供哪些材料、模板或证据？",
+      "at": "2026-11-05T05:34:59.042Z"
+    },
+    {
+      "id": "turn-28",
+      "speaker": "character",
+      "characterId": "education-support-r2",
+      "text": "材料这块，我这边能提供的是学习日志、作业反馈、求助标签和辅导记录这几类 [education-support-f21]，它们是我判断交接是否完整的底稿。模板上，我坚持交接单至少要有业务编号、当前版本、处理状态、未解决事项和接手人，并且对方确认接手才算本岗待办结束，只发消息不算完成 [education-support-f23]。\n\n但具体用哪套模板、证据留到什么颗粒度，目前尚未核实，需要和顾明岚确认试点口径。我关心的是：如果模板字段和平台记录对不上，返工会落回我这里。你们希望先验证交接单字段完整性，还是验证接手确认这个动作？这决定我准备哪类证据。",
+      "at": "2026-11-05T05:34:59.042Z",
+      "factIds": [
+        "education-support-f21",
+        "education-support-f23"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "fc9f7441-d6fc-4dab-8a84-43e80971d183",
+        "at": "2026-11-05T05:34:59.042Z",
+        "durationMs": 2087,
+        "usage": {
+          "prompt_tokens": 1117,
+          "completion_tokens": 174,
+          "total_tokens": 1291
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "693a8b85-7e6e-4184-8988-0470f613e0ae",
+          "at": "2026-11-05T05:34:56.955Z",
+          "durationMs": 690,
+          "usage": {
+            "prompt_tokens": 674,
+            "completion_tokens": 21,
+            "total_tokens": 695
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-29",
+      "speaker": "user",
+      "characterId": "education-support-r2",
+      "text": "业务规则如何维护，冲突如何处理？",
+      "at": "2026-11-05T05:35:07.052Z"
+    },
+    {
+      "id": "turn-30",
+      "speaker": "character",
+      "characterId": "education-support-r2",
+      "text": "规则维护这块，我的边界很清楚：与“学习支持与辅导协作”相关的规则由业务负责人维护，按生效日期和适用范围选版本，我不自行改规则内容 [education-support-f24]。冲突处理上，我的做法是附两个版本给教育数据专员，不自行合并，也不挑较宽松的条款来用 [education-support-f24]。\n\n我关心的是交接环节：如果规则版本没定清，交接单上的处理状态和未解决事项就可能按错版本判断，返工会落回我这里。所以我想先确认：试点期间规则版本由谁在什么节点确认生效？冲突提交给教育数据专员后，多久、由谁把结论回写到交接流程里？这两点目前尚未核实，需要和顾明岚、傅景对齐口径，否则我无法判断交接是否合规闭环。",
+      "at": "2026-11-05T05:35:07.052Z",
+      "factIds": [
+        "education-support-f24"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "55761df1-1c0b-49c9-9d4a-fe8505e06c57",
+        "at": "2026-11-05T05:35:07.052Z",
+        "durationMs": 2246,
+        "usage": {
+          "prompt_tokens": 1287,
+          "completion_tokens": 189,
+          "total_tokens": 1476
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "6376cd27-241e-49bf-8d38-b679c0a509b7",
+          "at": "2026-11-05T05:35:04.806Z",
+          "durationMs": 929,
+          "usage": {
+            "prompt_tokens": 873,
+            "completion_tokens": 11,
+            "total_tokens": 884
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-31",
+      "speaker": "user",
+      "characterId": "education-support-r2",
+      "text": "哪些操作必须人工审批，谁有权限？",
+      "at": "2026-11-05T05:35:18.957Z"
+    },
+    {
+      "id": "turn-32",
+      "speaker": "character",
+      "characterId": "education-support-r2",
+      "text": "权限这块我只能按我岗位的边界说清楚：我可以整理、校核和发起复核，但不能代替教育数据专员完成专业签核，也不能自行批准“求助整理与支持建议，不自动给学生定性或评分”以外的操作 [education-support-f22]。所以凡是涉及给学生定性、评分，或超出求助整理与支持建议范围的动作，我这边一律不自行放行，必须走专业签核。\n\n但具体哪些操作要审批、审批人是谁、签核在什么节点触发，目前尚未核实，需要和傅景对齐审核边界、和顾明岚确认试点口径。我关心的是：如果审批节点没定清，交接单上的处理状态我就没法判断是否合规，返工会落回我这里。建议先明确“需签核操作清单+对应签核人”这一待验证假设，再谈交接流程怎么落。你们希望先验证哪一类操作的审批？",
+      "at": "2026-11-05T05:35:18.957Z",
+      "factIds": [
+        "education-support-f22"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "440b78c9-580c-43b8-a606-df5faf421bd4",
+        "at": "2026-11-05T05:35:18.957Z",
+        "durationMs": 2042,
+        "usage": {
+          "prompt_tokens": 1507,
+          "completion_tokens": 206,
+          "total_tokens": 1713
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "a1af6172-aed2-4ee8-a35e-87ecf2f02bcc",
+          "at": "2026-11-05T05:35:16.915Z",
+          "durationMs": 1041,
+          "usage": {
+            "prompt_tokens": 1089,
+            "completion_tokens": 11,
+            "total_tokens": 1100
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-33",
+      "speaker": "user",
+      "characterId": "education-support-r3",
+      "text": "系统故障或接口中断时怎么办？",
+      "at": "2026-11-05T05:36:02.624Z"
+    },
+    {
+      "id": "turn-34",
+      "speaker": "character",
+      "characterId": "education-support-r3",
+      "text": "接口中断时，我的处理原则是继续使用带时间戳的上一份只读快照，并在界面上明确显示“暂未更新”，避免助教把旧状态当成实时结果 [education-support-f35]。重连后按业务编号去重补齐，不反复触发同一待办，现有人工流程继续运行 [education-support-f35]。另外，本次试点计划每小时更新已授权的业务状态，原始资料按版本更新；信息超过一个更新周期就标为待刷新，不能作为实时承诺 [education-support-f34]。\n\n不过我需要先澄清：故障期间哪些待办允许人工兜底、由谁确认补齐结果，目前尚未核实。这直接影响我这边接口重试和去重逻辑的边界，建议在试点前把责任交接和验收口径定下来。",
+      "at": "2026-11-05T05:36:02.624Z",
+      "factIds": [
+        "education-support-f35",
+        "education-support-f34"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "ae60fd1c-89bc-4cdd-a36b-86c4f861967d",
+        "at": "2026-11-05T05:36:02.624Z",
+        "durationMs": 1765,
+        "usage": {
+          "prompt_tokens": 987,
+          "completion_tokens": 188,
+          "total_tokens": 1175
+        },
+        "attemptCount": 2,
+        "attempts": [
+          {
+            "provider": "DeepSeek",
+            "model": "deepseek-flash",
+            "requestId": "5a2fe591-4cea-48ac-954c-8a3d06a26f5d",
+            "at": "2026-11-05T05:36:00.859Z",
+            "durationMs": 1860,
+            "usage": {
+              "prompt_tokens": 911,
+              "completion_tokens": 196,
+              "total_tokens": 1107
+            }
+          },
+          {
+            "provider": "DeepSeek",
+            "model": "deepseek-flash",
+            "requestId": "ae60fd1c-89bc-4cdd-a36b-86c4f861967d",
+            "at": "2026-11-05T05:36:02.624Z",
+            "durationMs": 1765,
+            "usage": {
+              "prompt_tokens": 987,
+              "completion_tokens": 188,
+              "total_tokens": 1175
+            }
+          }
+        ],
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "dd8555a7-3de3-4b6d-82b7-958307a08a3f",
+          "at": "2026-11-05T05:35:58.999Z",
+          "durationMs": 1111,
+          "usage": {
+            "prompt_tokens": 403,
+            "completion_tokens": 21,
+            "total_tokens": 424
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-35",
+      "speaker": "user",
+      "characterId": "education-support-r3",
+      "text": "怎样判断数据质量，发现脏数据怎么处理？",
+      "at": "2026-11-05T05:36:23.778Z"
+    },
+    {
+      "id": "turn-36",
+      "speaker": "character",
+      "characterId": "education-support-r3",
+      "text": "我这边判断数据质量，先看四类来源的主编号、事件时间和版本字段是否齐全：学习日志、作业反馈、求助标签、辅导记录 [education-support-f33]。其中作业补交与撤回事件目前缺少统一编号，这是已知缺口 [education-support-f31]，所以这两类事件我不会直接放进自动推荐样本。\n\n处理上分两条路：字段有歧义或编号对不上的记录，进人工修复队列，由人确认后再回流；能校验通过的才进入后续使用。这里我要强调一个口径：学习活跃度不等于理解 [education-support-f31]，不能拿活跃度当辅导效果的替代指标。\n\n需要你澄清的是：人工修复队列由谁负责、修复时限和回退规则怎么定，目前尚未核实。这直接决定我接口侧的去重和重试边界，建议在试点前把责任交接和验收口径定下来。",
+      "at": "2026-11-05T05:36:23.778Z",
+      "factIds": [
+        "education-support-f33",
+        "education-support-f31"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "62b49dca-5bae-4804-84bf-fa25b138f718",
+        "at": "2026-11-05T05:36:23.778Z",
+        "durationMs": 2054,
+        "usage": {
+          "prompt_tokens": 1119,
+          "completion_tokens": 209,
+          "total_tokens": 1328
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "0d6c7560-3d53-43ab-9429-40dbc96730f5",
+          "at": "2026-11-05T05:36:21.723Z",
+          "durationMs": 706,
+          "usage": {
+            "prompt_tokens": 620,
+            "completion_tokens": 21,
+            "total_tokens": 641
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-37",
+      "speaker": "user",
+      "characterId": "education-support-r3",
+      "text": "有哪些接口可用，能读还是能写？",
+      "at": "2026-11-05T05:36:35.481Z"
+    },
+    {
+      "id": "turn-38",
+      "speaker": "character",
+      "characterId": "education-support-r3",
+      "text": "接口能力我先按已核实的边界说：学习事件可以读，但系统不能自动给学生成绩或纪律处分 [education-support-f32]。也就是说，读侧我能提供事件数据，写侧涉及成绩、处分这类动作必须走人工确认，不在接口自动执行范围内。\n\n另外，我们目前在用 LMS、直播平台与辅导工单，各系统账号权限独立维护，业务状态还没有统一视图 [education-support-f30]。这意味着接口不是单一入口，跨系统拼状态时口径和权限要分别对齐。\n\n需要你澄清：你说的“写”具体指哪类动作——是更新待办状态、回写辅导记录，还是触发通知？不同动作对应的权限和审批不一样，目前尚未核实。建议试点前先列出读写清单和责任人，我再评估集成条件。",
+      "at": "2026-11-05T05:36:35.481Z",
+      "factIds": [
+        "education-support-f32",
+        "education-support-f30"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "113f2f24-281b-465a-a8d8-ea199157f7f0",
+        "at": "2026-11-05T05:36:35.481Z",
+        "durationMs": 2141,
+        "usage": {
+          "prompt_tokens": 1325,
+          "completion_tokens": 189,
+          "total_tokens": 1514
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "345f272e-b29d-4664-b720-b6b96cbbb196",
+          "at": "2026-11-05T05:36:33.340Z",
+          "durationMs": 783,
+          "usage": {
+            "prompt_tokens": 856,
+            "completion_tokens": 16,
+            "total_tokens": 872
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-39",
+      "speaker": "user",
+      "characterId": "education-support-r4",
+      "text": "审计需要什么凭证，怎么追溯修改？",
+      "at": "2026-11-05T05:36:52.340Z"
+    },
+    {
+      "id": "turn-40",
+      "speaker": "character",
+      "characterId": "education-support-r4",
+      "text": "审计凭证这块，我这边能确认的口径是：每次建议要保留业务编号、资料版本、事实引用、建议结果、人工改动和签核人，审计时能重建“学习记录→支持需求识别→助教联系→辅导安排→反馈→复盘”这条处理链，但不记录账号口令或不必要的个人信息 [education-support-f45]。\n\n至于“怎么追溯修改”，目前尚未核实具体机制，我不便替你定流程。我的建议是：把人工改动和签核人作为追溯锚点，改动前后都留痕，这属于待验证假设，需要秦芮核对系统侧能否做到，顾明岚从试点决策角度确认责任归属。\n\n另外提醒留存边界：试点原始资料按本场景授权范围保存，本轮评价记录暂保留 90 天，期满由我复核删除或归档，真实期限仍须按组织规则另行确定 [education-support-f43]。你这边想先核“改动留痕”还是“期满处置”这一块？",
+      "at": "2026-11-05T05:36:52.340Z",
+      "factIds": [
+        "education-support-f45",
+        "education-support-f43"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "b0006df8-e134-4bdb-bb93-e555cec0604c",
+        "at": "2026-11-05T05:36:52.340Z",
+        "durationMs": 1900,
+        "usage": {
+          "prompt_tokens": 1185,
+          "completion_tokens": 232,
+          "total_tokens": 1417
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "05296a28-0c22-4a97-a20f-c56f11decf2b",
+          "at": "2026-11-05T05:36:50.440Z",
+          "durationMs": 628,
+          "usage": {
+            "prompt_tokens": 717,
+            "completion_tokens": 21,
+            "total_tokens": 738
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-41",
+      "speaker": "user",
+      "characterId": "education-support-r4",
+      "text": "怎么验收成功？试点标准是什么？",
+      "at": "2026-11-05T05:37:03.159Z"
+    },
+    {
+      "id": "turn-42",
+      "speaker": "character",
+      "characterId": "education-support-r4",
+      "text": "验收这块我能确认的口径是：两个班级试点，求助漏单低于 2%，人工确认后再联系学生；同时检查“不依据个人敏感属性判断能力，建议必须附实际行为证据”，只要触及停止条件，就暂停试点并由负责人复盘 [education-support-f42]。\n\n我这边最关心的是后半句，因为它是我的责任边界：任何建议如果拿个人敏感属性当判断依据，或者没有实际行为证据支撑，我这边不能放行，这属于硬约束 [education-support-f40]。漏单率是业务指标，证据约束是合规指标，两者要分开验收，不能只看漏单数字好看就通过。\n\n尚未核实的是：停止条件具体列哪几条、由谁判定触发、复盘产出交给谁。我的建议是把停止条件逐条写进试点方案，判定人和复盘责任挂到顾明岚那边确认，秦芮核对系统能否自动留痕，这属于待验证假设。你这边想先核漏单口径，还是先核停止条件的判定责任？",
+      "at": "2026-11-05T05:37:03.159Z",
+      "factIds": [
+        "education-support-f42",
+        "education-support-f40"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "8abc71b3-8677-4a80-895c-9ba196417a7e",
+        "at": "2026-11-05T05:37:03.159Z",
+        "durationMs": 1922,
+        "usage": {
+          "prompt_tokens": 1401,
+          "completion_tokens": 237,
+          "total_tokens": 1638
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "e693b192-6e0f-43af-8f06-45a5f92dc95a",
+          "at": "2026-11-05T05:37:01.237Z",
+          "durationMs": 807,
+          "usage": {
+            "prompt_tokens": 974,
+            "completion_tokens": 21,
+            "total_tokens": 995
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-43",
+      "speaker": "user",
+      "characterId": "education-support-r5",
+      "text": "有多少单、花多久，有统计样本吗？",
+      "at": "2026-11-05T05:37:16.196Z"
+    },
+    {
+      "id": "turn-44",
+      "speaker": "character",
+      "characterId": "education-support-r5",
+      "text": "有可用的工作量基线：每周约 900 条求助，助教分类与转交每条约 6 分钟 [education-support-f51]。但这是分类转交环节的耗时，不等于从学生求助到真正解决的完整时长，后者我这边没有现成样本，尚未核实。\n\n从我负责的服务解释与反馈闭环看，我更关心两件事：一是交接等待和重新联系次数要逐笔采集，不能用发送通知数量代替实际完成量 [education-support-f51]；二是各岗口径不同——运营看登录率、我看掌握情况、助教看求助解决率，必须分别记录各岗完成时间，并固定分母、排除规则和统计周期，不能把同一业务拆成多次“成功” [education-support-f53]。\n\n如果你们要拿样本做试点验收，建议先明确统计周期和排除规则，否则我这边对外解释投诉和反馈时口径会对不上。这个建议属于待验证假设，需要和顾明岚、傅景确认后才能定。",
+      "at": "2026-11-05T05:37:16.196Z",
+      "factIds": [
+        "education-support-f51",
+        "education-support-f53"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "11a0c697-5e26-40f0-be52-782c4bef70e5",
+        "at": "2026-11-05T05:37:16.196Z",
+        "durationMs": 1871,
+        "usage": {
+          "prompt_tokens": 927,
+          "completion_tokens": 234,
+          "total_tokens": 1161
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "2e1b8258-988b-46fc-8bc9-a482faace75a",
+          "at": "2026-11-05T05:37:14.325Z",
+          "durationMs": 867,
+          "usage": {
+            "prompt_tokens": 439,
+            "completion_tokens": 16,
+            "total_tokens": 455
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-45",
+      "speaker": "user",
+      "characterId": "education-support-r5",
+      "text": "试点反馈怎么收集，怎样形成改进闭环？",
+      "at": "2026-11-05T05:37:26.774Z"
+    },
+    {
+      "id": "turn-46",
+      "speaker": "character",
+      "characterId": "education-support-r5",
+      "text": "试点反馈这块，我这边能承诺的是把课程讲师侧的误判例子和未解决问题按周交出来，但收集口径和负责人不能由我定。按现有规则，试点每周收集助教、课程运营员、课程讲师的误判例子和未解决问题，由学习服务主任确认改进负责人，先复测“两个班级试点、求助漏单低于2%”再更新规则版本 [education-support-f55]。所以闭环的关键是：谁收、谁判、谁改、何时复测，这四件事得在试点前写清楚，否则我交上来的例子没人认领，就变成走过场。\n\n另外，投诉和下游反馈要先关联原业务编号和当时使用的资料版本，再查实际交接是否完成；争议由我受理、课程运营员核对，未经确认不承诺赔偿或结果 [education-support-f54]。这意味着反馈闭环不能只看“有没有回复”，还要能追到版本和交接记录。\n\n我建议先和顾明岚确认改进负责人的指派方式、复测周期，和傅景确认哪些反馈可对外解释；这些属于待验证假设，尚未核实。",
+      "at": "2026-11-05T05:37:26.774Z",
+      "factIds": [
+        "education-support-f55",
+        "education-support-f54"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "5fc8824f-07b6-462c-9771-1fd6f89964f2",
+        "at": "2026-11-05T05:37:26.774Z",
+        "durationMs": 2831,
+        "usage": {
+          "prompt_tokens": 1191,
+          "completion_tokens": 261,
+          "total_tokens": 1452
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "9081b944-8caf-4dec-97d4-2f5a03def47f",
+          "at": "2026-11-05T05:37:23.943Z",
+          "durationMs": 632,
+          "usage": {
+            "prompt_tokens": 701,
+            "completion_tokens": 21,
+            "total_tokens": 722
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-47",
+      "speaker": "user",
+      "characterId": "education-support-r5",
+      "text": "本次范围是什么，哪些事情不能自动做？",
+      "at": "2026-11-05T05:37:51.811Z"
+    },
+    {
+      "id": "turn-48",
+      "speaker": "character",
+      "characterId": "education-support-r5",
+      "text": "范围上，我负责的是服务解释与反馈闭环这一段：把课程讲师侧遇到的误判例子、未解决问题和投诉反馈收上来，关联原业务编号和资料版本，再推动确认改进负责人和复测。但边界要先说清楚——求助整理与支持建议可以做，不能自动给学生定性或评分 [education-support-f52]。这条对我很关键：一旦系统自动给出“这个学生不行”之类的判断，我对外解释投诉时就没法站住脚，也越过我的责任边界。\n\n至于哪些环节能自动、哪些必须人工兜底，目前尚未核实，需要和傅景确认审核边界、和顾明岚确认试点决策。我建议把“自动整理建议”和“人工定性结论”分开列清单，作为待验证假设在试点前定下来。",
+      "at": "2026-11-05T05:37:51.811Z",
+      "factIds": [
+        "education-support-f52"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "5c8f5889-32fe-438a-ba73-1f29e647200e",
+        "at": "2026-11-05T05:37:51.811Z",
+        "durationMs": 1938,
+        "usage": {
+          "prompt_tokens": 1368,
+          "completion_tokens": 183,
+          "total_tokens": 1551
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "e203fddd-1739-469c-906f-e67c84a919fd",
+          "at": "2026-11-05T05:37:49.873Z",
+          "durationMs": 575,
+          "usage": {
+            "prompt_tokens": 989,
+            "completion_tokens": 11,
+            "total_tokens": 1000
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-49",
+      "speaker": "user",
+      "characterId": "education-support-r5",
+      "text": "跨部门交接有哪些冲突？",
+      "at": "2026-11-05T05:38:02.554Z"
+    },
+    {
+      "id": "turn-50",
+      "speaker": "character",
+      "characterId": "education-support-r5",
+      "text": "跨部门交接的冲突，从我课程讲师这个位置看，最直接的是口径不一致：运营统计登录率，讲师统计掌握情况，助教统计求助解决率 [education-support-f50]。三个指标各说各话，交接时谁都能说自己这环完成了，但学生实际有没有被支持到，没人能一句话说清。\n\n第二个冲突是“完成”的定义。需要分别记录各岗完成时间，试点指标固定分母、排除规则和统计周期，不能把同一业务拆成多次“成功”提高比例 [education-support-f53]。如果交接单上只写“已转交”，我对外解释投诉时就无法证明实际交接是否完成。\n\n我这边能承诺的是把讲师侧误判例子和未解决问题按周交出，但谁收、谁判、谁改、何时复测，不在我的权限内，需要和顾明岚、傅景确认。具体冲突清单我尚未核实，建议先按“原业务编号+资料版本+各岗完成时间”逐笔对齐，作为待验证假设在试点前定下来。",
+      "at": "2026-11-05T05:38:02.554Z",
+      "factIds": [
+        "education-support-f50",
+        "education-support-f53"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "32cb7afc-bfe2-415c-ba58-8c4ed1a47255",
+        "at": "2026-11-05T05:38:02.554Z",
+        "durationMs": 2144,
+        "usage": {
+          "prompt_tokens": 1652,
+          "completion_tokens": 248,
+          "total_tokens": 1900
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "166b2976-bb09-4a02-9191-d528f294e29c",
+          "at": "2026-11-05T05:38:00.410Z",
+          "durationMs": 544,
+          "usage": {
+            "prompt_tokens": 1195,
+            "completion_tokens": 21,
+            "total_tokens": 1216
+          },
+          "attemptCount": 1
+        }
+      }
+    }
+  ],
+  "methodContext": {
+    "buyer": "顾明岚",
+    "operator": "林亦舟"
+  },
+  "framework": "基于 fde-simulation 的 workflow-decomposition、outcome-risk-matrix 与 4-source-convergence 框架进行需求归纳。",
+  "analysis": {
+    "summary": "现有事实已能定位到三类瓶颈：一是求助分散在群聊与作业评论、连续求助易漏，且分类转交每条约6分钟、每周约900条，人工负荷与漏单风险并存；二是交接只发消息不算完成、关键说明留在个人便签，跨岗责任与版本口径不清；三是数据侧活跃度不等于理解、补交撤回缺统一编号、多系统无统一视图，自动判断的证据基础不足。管理层目标为首次响应26小时降至8小时、重复求助率35%降至15%，试点验收为两班漏单低于2%且人工确认后再联系学生。切入点建议优先做“求助归集与交接闭环”的辅助验证，而非自动定性；不可逆风险集中在敏感属性判断、自动评分与越权签核，须先设停止条件与人工兜底。",
+    "hypotheses": [
+      {
+        "title": "求助归集与连续求助识别是首要瓶颈，应先验证漏单率而非直接上自动建议",
+        "owner": "学习服务主任顾明岚（业务）、助教林亦舟（执行）",
+        "priority": "P0",
+        "reasoning": "事实显示学生问题散在群聊和作业评论、助教常漏掉连续求助（f10），每周约900条、分类转交每条约6分钟（f12/f51），而验收明确两班试点漏单低于2%（f02/f42）。但各节点等待与处理时间尚未分别量出（f01），无法确认漏单主要发生在识别还是转交环节，因此只能作为待验证假设。",
+        "nextStep": "在两班试点中按业务编号逐笔记录求助来源、首次识别时间、转交时间与是否漏单，先跑两周基线；以漏单低于2%为验收线，人工确认后再联系学生。由顾明岚确认统计口径，林亦舟提供现场样本。",
+        "evidenceIds": [
+          "education-support-f10",
+          "education-support-f12",
+          "education-support-f01",
+          "education-support-f02",
+          "education-support-f51"
+        ]
+      },
+      {
+        "title": "交接“确认接手才算完成”的规则需系统化，否则跨岗责任仍会断",
+        "owner": "课程运营员唐映秋",
+        "priority": "P0",
+        "reasoning": "交接至少需业务编号、当前版本、处理状态、未解决事项和接手人，对方确认接手才结束本岗待办，仅发消息不算完成（f23）；异常先由课程运营员分派，超时升级到学习服务主任，跨岗不能只写“已转交”（f25）。同时关键说明常留在个人便签或群里再补录（f14），说明现有交接存在事实缺口。但模板字段与平台记录能否对齐尚未核实，需先验证。",
+        "nextStep": "用历史资料回放抽取若干交接单，检查五要素完整率与接手确认率；再在小范围并行试点中比对系统字段与交接单字段差异。唐映秋整理样本，顾明岚确认试点口径。",
+        "evidenceIds": [
+          "education-support-f23",
+          "education-support-f25",
+          "education-support-f14",
+          "education-support-f20"
+        ]
+      },
+      {
+        "title": "自动建议必须附实际行为证据并保留原记录，敏感属性判断为停止条件",
+        "owner": "教育数据专员傅景",
+        "priority": "P0",
+        "reasoning": "规则明确不依据个人敏感属性判断能力、建议必须附实际行为证据（f40），且视频播放时长高但实际挂着播放器不能认定已理解（f11），学习活跃度不等于理解（f31）。助教要求建议显示原记录与待确认字段，错误结果不能覆盖原记录（f15）；审计需保留业务编号、资料版本、事实引用、人工改动与签核人（f45）。这些是硬约束，但停止条件具体条目与判定人尚未核实（f42）。",
+        "nextStep": "先列出“禁止自动动作清单”与“必须人工签核清单”，逐条对应证据字段；用历史回放检验每条建议能否追溯到原记录。傅景判定停止条件触发，顾明岚确认复盘责任。",
+        "evidenceIds": [
+          "education-support-f40",
+          "education-support-f11",
+          "education-support-f31",
+          "education-support-f15",
+          "education-support-f45",
+          "education-support-f42"
+        ]
+      },
+      {
+        "title": "数据口径与接口能力不足，自动推荐样本须先过质量校验",
+        "owner": "学习平台工程师秦芮",
+        "priority": "P1",
+        "reasoning": "系统在用LMS、直播平台与辅导工单，账号权限独立、业务状态无统一视图（f30）；作业补交与撤回事件缺统一编号（f31），有歧义记录应进人工修复队列、不进自动推荐样本（f33）。接口可读学习事件但不能自动给成绩或纪律处分（f32），故障时用带时间戳只读快照并标“暂未更新”（f35）。但人工修复队列负责人与时限尚未核实，接口“写”的具体动作也未澄清。",
+        "nextStep": "先列读写清单与责任人，明确“写”指更新待办状态、回写辅导记录还是触发通知；对补交撤回事件做编号补齐试验，统计进入人工修复队列的比例。秦芮评估集成条件，傅景确认数据授权范围。",
+        "evidenceIds": [
+          "education-support-f30",
+          "education-support-f31",
+          "education-support-f33",
+          "education-support-f32",
+          "education-support-f35"
+        ]
+      },
+      {
+        "title": "权限与签核边界需在试点前定清，课程运营员不得代签",
+        "owner": "教育数据专员傅景（签核）、学习服务主任顾明岚（试点决策）",
+        "priority": "P1",
+        "reasoning": "只有授权业务岗位可查看学习日志、作业反馈、求助标签和辅导记录，涉及最终决定、对外承诺或资产变更须由对应审批人确认，不能借用他人账号（f41）；课程运营员可整理、校核、发起复核，但不能代替教育数据专员签核，也不能自行批准求助整理与支持建议以外操作（f22）。但需签核操作清单与触发节点尚未核实，属待验证假设。",
+        "nextStep": "由傅景与顾明岚共同产出“需签核操作清单+签核人+触发节点”，在历史回放中模拟一次越权请求，检验系统能否拦截并留痕。教育数据专员对关键风险可否决上线（f04）。",
+        "evidenceIds": [
+          "education-support-f41",
+          "education-support-f22",
+          "education-support-f04"
+        ]
+      },
+      {
+        "title": "验收指标需分岗分口径，避免用通知量或拆分成功替代实际完成",
+        "owner": "课程讲师叶书（服务解释）、学习服务主任顾明岚（验收）",
+        "priority": "P1",
+        "reasoning": "运营统计登录率、讲师统计掌握情况、助教统计求助解决率，需分别记录各岗完成时间并固定分母、排除规则和统计周期，不能把同一业务拆成多次成功（f53/f50）；服务侧逐笔采集交接等待和重新联系次数，不能用发送通知数量代替实际完成量（f51）。试点每周收集误判例子与未解决问题，由学习服务主任确认改进负责人，先复测漏单再更新规则版本（f55）。但完整解决时长无现成样本，统计周期未定。",
+        "nextStep": "先定统计周期、分母与排除规则，再按业务编号逐笔采集交接等待与重新联系次数；以两班漏单低于2%复测为前置，达标后才更新规则版本。叶书提供讲师侧误判样本，顾明岚确认改进负责人。",
+        "evidenceIds": [
+          "education-support-f53",
+          "education-support-f50",
+          "education-support-f51",
+          "education-support-f55"
+        ]
+      }
+    ],
+    "followUps": [
+      "试点期间规则版本由谁在什么节点确认生效？冲突提交教育数据专员后，多久、由谁把结论回写到交接流程？",
+      "需签核操作清单具体包含哪些动作，各自签核人与触发节点是什么？",
+      "接口“写”具体指更新待办状态、回写辅导记录还是触发通知，各自权限与审批如何？",
+      "人工修复队列由谁负责，修复时限与回退规则如何定？",
+      "停止条件具体列哪几条，由谁判定触发，复盘产出交给谁？",
+      "完整解决时长目前无样本，试点统计周期、分母与排除规则如何确定？",
+      "故障期间哪些待办允许人工兜底，由谁确认补齐结果？",
+      "改进负责人的指派方式与复测周期如何确定，哪些反馈可对外解释？"
+    ],
+    "limitations": "以上均为基于已采集事实的待验证假设，非验收结论。各节点等待与处理时间未分别量出（f01），完整解决时长无样本，停止条件条目、签核清单、人工修复队列责任与接口写动作均尚未核实；调查覆盖率36/36不代表试点通过。四类材料仅作证据来源，未替代Buyer、Brief、Industry、Operator四视角收敛，需补充对应访谈后再定优先级。",
+    "audit": {
+      "provider": "DeepSeek",
+      "model": "deepseek-flash",
+      "requestId": "a03f6bb8-e1d4-4b69-b607-58e7b41c0471",
+      "at": "2026-11-05T05:38:39.572Z",
+      "durationMs": 12038,
+      "usage": {
+        "prompt_tokens": 7781,
+        "completion_tokens": 1872,
+        "total_tokens": 9653
+      },
+      "attemptCount": 1
+    }
+  },
+  "methodology": {
+    "version": 1,
+    "guide": [
+      {
+        "id": "workflow-decomposition",
+        "name": "业务流程拆解",
+        "file": "frameworks/workflow-decomposition.md",
+        "question": "问题发生在哪一步，为什么要这样划分智能体？",
+        "steps": [
+          "先画人工现状泳道，写出触发、输入、8–15个处理步骤、交接和异常。",
+          "区分判断点与执行点；按使用的数据、权限、模型能力与失败方式组合执行步骤。",
+          "在不可逆动作前设置确定性校验；为低置信、缺资料、冲突和越权安排具名人工接收人。"
+        ],
+        "output": "现状流程 → 失败方式 → 智能体/工具边界 → 校验与人工升级路径"
+      },
+      {
+        "id": "outcome-risk-matrix",
+        "name": "业务结果与不可逆风险矩阵",
+        "file": "frameworks/outcome-risk-matrix.md",
+        "question": "多个需求中，先做哪个最小可验证方案？",
+        "steps": [
+          "列出3–5个候选切入点，分别说明改善的业务结果、现状基线和投入。",
+          "评估失败何时被谁看见、能否在损害前拦截、是否可以撤销；不要把模型置信度等同于业务风险。",
+          "优先选择高价值、可拦截且可恢复的切入点；高风险需硬约束和责任人否决权，价值或风险未知先补证据。"
+        ],
+        "output": "候选方案 → 价值/风险比较 → 选择与暂缓理由 → 验收指标与停止条件"
+      },
+      {
+        "id": "4-source-convergence",
+        "name": "四来源收敛",
+        "file": "frameworks/4-source-convergence.md",
+        "question": "谁说要做，哪里真的坏了，范围允许什么，技术是否可行？",
+        "steps": [
+          "Buyer：核实业务目标、预算、优先级和决定权；Operator：用最近一单还原真实操作和失败位置。",
+          "Brief：核对书面目标、范围、时间和排除项；Industry：寻找可比技术实践，并核实本项目的数据与接口差异。",
+          "检查四个视角是否指向同一瓶颈。分歧保留在问题清单：一线帮助定位故障，决策者确认价值，Brief约束范围，行业证据帮助判断可行性。"
+        ],
+        "output": "四视角陈述与来源 → 收敛/分歧 → 待核实问题 → 有边界的需求假设"
+      }
+    ],
+    "sources": [
+      {
+        "id": "buyer",
+        "name": "Buyer · 业务决策者",
+        "statement": "顾明岚",
+        "evidenceIds": [
+          "education-support-f00",
+          "education-support-f01",
+          "education-support-f02",
+          "education-support-f03",
+          "education-support-f05",
+          "education-support-f04"
+        ],
+        "status": "已采集角色陈述，目标和预算仍待确认"
+      },
+      {
+        "id": "brief",
+        "name": "Brief · 书面需求",
+        "statement": "我们在“学习支持与辅导协作”上投入了很多人力。学生问题散在群聊和作业评论里，助教常漏掉连续求助。管理层希望用 AI 改善，但还没有确定优先环节、验收标准和权限边界。请你先和各岗位聊聊，找出值得验证的业务需求。",
+        "evidenceIds": [],
+        "status": "当前只有场景开场；书面Brief原文与版本待补"
+      },
+      {
+        "id": "industry",
+        "name": "Industry · 行业可行性",
+        "statement": "需要可比技术案例、数据条件和接口能力的核验材料。企业业务介绍不能证明技术可行。",
+        "evidenceIds": [],
+        "status": "待补行业实践与本项目适用性验证"
+      },
+      {
+        "id": "operator",
+        "name": "Operator · 一线使用者",
+        "statement": "林亦舟",
+        "evidenceIds": [
+          "education-support-f11",
+          "education-support-f15",
+          "education-support-f12",
+          "education-support-f10",
+          "education-support-f13",
+          "education-support-f14"
+        ],
+        "status": "已采集现场陈述，仍需样本与操作观察核实"
+      }
+    ],
+    "trace": [
+      {
+        "id": "REQ-1",
+        "title": "求助归集与连续求助识别是首要瓶颈，应先验证漏单率而非直接上自动建议",
+        "evidenceIds": [
+          "education-support-f10",
+          "education-support-f12",
+          "education-support-f01",
+          "education-support-f02",
+          "education-support-f51"
+        ],
+        "derivation": "事实显示学生问题散在群聊和作业评论、助教常漏掉连续求助（f10），每周约900条、分类转交每条约6分钟（f12/f51），而验收明确两班试点漏单低于2%（f02/f42）。但各节点等待与处理时间尚未分别量出（f01），无法确认漏单主要发生在识别还是转交环节，因此只能作为待验证假设。",
+        "priority": "P0",
+        "decision": "候选需求；需用结果与不可逆风险矩阵比较，P0/P1/P2不等于已完成价值风险评分。",
+        "verification": "在两班试点中按业务编号逐笔记录求助来源、首次识别时间、转交时间与是否漏单，先跑两周基线；以漏单低于2%为验收线，人工确认后再联系学生。由顾明岚确认统计口径，林亦舟提供现场样本。"
+      },
+      {
+        "id": "REQ-2",
+        "title": "交接“确认接手才算完成”的规则需系统化，否则跨岗责任仍会断",
+        "evidenceIds": [
+          "education-support-f23",
+          "education-support-f25",
+          "education-support-f14",
+          "education-support-f20"
+        ],
+        "derivation": "交接至少需业务编号、当前版本、处理状态、未解决事项和接手人，对方确认接手才结束本岗待办，仅发消息不算完成（f23）；异常先由课程运营员分派，超时升级到学习服务主任，跨岗不能只写“已转交”（f25）。同时关键说明常留在个人便签或群里再补录（f14），说明现有交接存在事实缺口。但模板字段与平台记录能否对齐尚未核实，需先验证。",
+        "priority": "P0",
+        "decision": "候选需求；需用结果与不可逆风险矩阵比较，P0/P1/P2不等于已完成价值风险评分。",
+        "verification": "用历史资料回放抽取若干交接单，检查五要素完整率与接手确认率；再在小范围并行试点中比对系统字段与交接单字段差异。唐映秋整理样本，顾明岚确认试点口径。"
+      },
+      {
+        "id": "REQ-3",
+        "title": "自动建议必须附实际行为证据并保留原记录，敏感属性判断为停止条件",
+        "evidenceIds": [
+          "education-support-f40",
+          "education-support-f11",
+          "education-support-f31",
+          "education-support-f15",
+          "education-support-f45",
+          "education-support-f42"
+        ],
+        "derivation": "规则明确不依据个人敏感属性判断能力、建议必须附实际行为证据（f40），且视频播放时长高但实际挂着播放器不能认定已理解（f11），学习活跃度不等于理解（f31）。助教要求建议显示原记录与待确认字段，错误结果不能覆盖原记录（f15）；审计需保留业务编号、资料版本、事实引用、人工改动与签核人（f45）。这些是硬约束，但停止条件具体条目与判定人尚未核实（f42）。",
+        "priority": "P0",
+        "decision": "候选需求；需用结果与不可逆风险矩阵比较，P0/P1/P2不等于已完成价值风险评分。",
+        "verification": "先列出“禁止自动动作清单”与“必须人工签核清单”，逐条对应证据字段；用历史回放检验每条建议能否追溯到原记录。傅景判定停止条件触发，顾明岚确认复盘责任。"
+      },
+      {
+        "id": "REQ-4",
+        "title": "数据口径与接口能力不足，自动推荐样本须先过质量校验",
+        "evidenceIds": [
+          "education-support-f30",
+          "education-support-f31",
+          "education-support-f33",
+          "education-support-f32",
+          "education-support-f35"
+        ],
+        "derivation": "系统在用LMS、直播平台与辅导工单，账号权限独立、业务状态无统一视图（f30）；作业补交与撤回事件缺统一编号（f31），有歧义记录应进人工修复队列、不进自动推荐样本（f33）。接口可读学习事件但不能自动给成绩或纪律处分（f32），故障时用带时间戳只读快照并标“暂未更新”（f35）。但人工修复队列负责人与时限尚未核实，接口“写”的具体动作也未澄清。",
+        "priority": "P1",
+        "decision": "候选需求；需用结果与不可逆风险矩阵比较，P0/P1/P2不等于已完成价值风险评分。",
+        "verification": "先列读写清单与责任人，明确“写”指更新待办状态、回写辅导记录还是触发通知；对补交撤回事件做编号补齐试验，统计进入人工修复队列的比例。秦芮评估集成条件，傅景确认数据授权范围。"
+      },
+      {
+        "id": "REQ-5",
+        "title": "权限与签核边界需在试点前定清，课程运营员不得代签",
+        "evidenceIds": [
+          "education-support-f41",
+          "education-support-f22",
+          "education-support-f04"
+        ],
+        "derivation": "只有授权业务岗位可查看学习日志、作业反馈、求助标签和辅导记录，涉及最终决定、对外承诺或资产变更须由对应审批人确认，不能借用他人账号（f41）；课程运营员可整理、校核、发起复核，但不能代替教育数据专员签核，也不能自行批准求助整理与支持建议以外操作（f22）。但需签核操作清单与触发节点尚未核实，属待验证假设。",
+        "priority": "P1",
+        "decision": "候选需求；需用结果与不可逆风险矩阵比较，P0/P1/P2不等于已完成价值风险评分。",
+        "verification": "由傅景与顾明岚共同产出“需签核操作清单+签核人+触发节点”，在历史回放中模拟一次越权请求，检验系统能否拦截并留痕。教育数据专员对关键风险可否决上线（f04）。"
+      },
+      {
+        "id": "REQ-6",
+        "title": "验收指标需分岗分口径，避免用通知量或拆分成功替代实际完成",
+        "evidenceIds": [
+          "education-support-f53",
+          "education-support-f50",
+          "education-support-f51",
+          "education-support-f55"
+        ],
+        "derivation": "运营统计登录率、讲师统计掌握情况、助教统计求助解决率，需分别记录各岗完成时间并固定分母、排除规则和统计周期，不能把同一业务拆成多次成功（f53/f50）；服务侧逐笔采集交接等待和重新联系次数，不能用发送通知数量代替实际完成量（f51）。试点每周收集误判例子与未解决问题，由学习服务主任确认改进负责人，先复测漏单再更新规则版本（f55）。但完整解决时长无现成样本，统计周期未定。",
+        "priority": "P1",
+        "decision": "候选需求；需用结果与不可逆风险矩阵比较，P0/P1/P2不等于已完成价值风险评分。",
+        "verification": "先定统计周期、分母与排除规则，再按业务编号逐笔采集交接等待与重新联系次数；以两班漏单低于2%复测为前置，达标后才更新规则版本。叶书提供讲师侧误判样本，顾明岚确认改进负责人。"
+      }
+    ],
+    "conclusion": "先从已采集事实形成问题假设，再约定业务结果、范围、失败控制和验收。缺少的来源标记待补，不能把六人访谈完整率当作四来源收敛或需求确认。"
+  },
+  "handoff": {
+    "reportId": "REPORT-d22576e4-09fc-405e-aed6-1626a33cc5e4",
+    "version": 1,
+    "sourceStage": "opportunity",
+    "targetStage": "discovery",
+    "href": "/group-training?project=education-support&attemptId=47c94313-150a-4d39-b595-d5badaf39d4c&stage=discovery",
+    "stageHref": "/group-training?project=education-support&attemptId=47c94313-150a-4d39-b595-d5badaf39d4c&stage=opportunity"
+  }
+}
